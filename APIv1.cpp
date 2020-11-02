@@ -11,7 +11,7 @@ std::string api(std::string coursecode) {
 	return r.text;
 }
 int main() {
-	std::string info = api("APSC-111");
+	std::string info = api("CMPE-320");
 	std::cout << info << std::endl;
 	char units = info[info.length() - 1];
 	std::cout << units << std::endl;
