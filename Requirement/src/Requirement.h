@@ -1,9 +1,3 @@
-/*
- * Requirement.h
- *
- *  Created on: Nov. 5, 2020
- *      Author: jessielu
- */
 
 #ifndef REQUIREMENT_H_
 #define REQUIREMENT_H_
@@ -24,10 +18,13 @@ public:
 	//public methods
 	void initialize();//loads in prog.txt file, sorts and stores into vectors
 
+
 private:
-		string program;
+		string program; //stores program name
 		string filename; //stores name of file
-		vector<string> firstInsult, secInsult, thirdInsult; //vectors store insults
+		vector<string> coreFirstReq, coreSecReq, coreThirReq, coreFourReq, techGroupA, techGroupB;
+		vector<string> compliReq;
+
 };
 
 //File Exception returns error message given message received--> errors opening file
