@@ -20,7 +20,7 @@ Requirement::Requirement(const string& programs) {
 	program=programs;
 	filename=program+".txt";
 
-	initialize();
+	readFile();
 }
 
 //Constructor parameter: program name + subprogram name
@@ -29,7 +29,7 @@ Requirement::Requirement(const string& program,const string& subProgram) {
 }
 
 //Reads in .txt file and stores info
-void Requirement::initialize(){
+void Requirement::readFile(){
 
 	vector< vector < string> > listOfcourseReq(7);//vector list of vectors to store file info
 
@@ -61,30 +61,63 @@ void Requirement::initialize(){
 		//string temp=to_string(i)+" : "+line + "---- "+to_string(j); <-- used for testing.
 
 		listOfcourseReq[i].push_back(line); //push course/line into
-		coreFirstReq, coreSecReq, coreThirReq, coreFourReq, techGroupA, techGroupB;
-		coreFirstReq=listO
+
 
 	}
-	//Assiging them to private variables.
-	coreFirstReq=listOfcourseReq[0];
-	coreSecReq=listOfcourseReq[1];
-	coreThirReq=listOfcourseReq[2];
-	coreFourReq=listOfcourseReq[3];
-	compliReq=listOfcourseReq[4];
-	techGroupA=listOfcourseReq[5];
-	techGroupA=listOfcourseReq[6];
 
-	//If u want to see all the contents printed out
-//	for (int i = 0; i < listOfcourseReq.size(); i++)
-//	    {
-//	        for (int j = 0; j < listOfcourseReq[i].size(); j++)
-//	        {
-//	            cout << to_string(i)+" "+to_string(j)+" "+listOfcourseReq[i][j] <<endl;
-//	        }
-//	        cout << endl;
-//	    }
 
 	fileInAgain.close();
+	initCourse(listOfcourseReq);//Initialize stored course names as course objects
+}
+
+
+void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
+	vector<vector<Course> > courseListObj(7);
+
+		for (int i = 0; i < listOfcourseReq.size(); i++)
+		    {
+				//index starting at one to rid of titles
+		        for (int j = 1; j < listOfcourseReq[i].size(); j++)
+		        {
+		        	Course newCourse(listOfcourseReq[i][j]);//initializing new course
+		        	courseListObj[i].push_back(newCourse);
+		        }
+
+		    }
+
+	//cout<<courseListObj[0][8].getCourseID()<<endl; <--Testing objects.
+
+		//Assiging them to private variables.
+		coreFirstReq=courseListObj[0];
+		coreSecReq=courseListObj[1];
+		coreThirReq=courseListObj[2];
+		coreFourReq=courseListObj[3];
+		compliReq=courseListObj[4];
+		techGroupA=courseListObj[5];
+		techGroupA=courseListObj[6];
+}
+
+//Accessor Methods
+vector<Course> Requirement::getFirstReq(){
+	return coreFirstReq;
+}
+vector<Course> Requirement::getSecReq(){
+	return coreSecReq;
+}
+vector<Course> Requirement::getThirReq(){
+	return coreThirReq;
+}
+vector<Course> Requirement::getFourReq(){
+	return coreFourReq;
+}
+vector<Course> Requirement::getGroupA(){
+	return techGroupA;
+}
+vector<Course> Requirement::getGroupB(){
+	return techGroupB;
+}
+vector<Course> Requirement::getCompliReq(){
+	return compliReq;
 }
 
 
