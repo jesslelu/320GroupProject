@@ -1,3 +1,9 @@
+/*
+ * Requirement.h
+ *
+ *  Created on: Nov. 5, 2020
+ *      Author: jessielu
+ */
 
 #ifndef REQUIREMENT_H_
 #define REQUIREMENT_H_
@@ -6,7 +12,6 @@
 #include <vector>
 #include <iostream>
 #include <cstring>
-#include "Course.h"
 using namespace std;
 
 class Requirement {
@@ -17,21 +22,12 @@ public:
 	Requirement(const string& program,const string& subProg);
 
 	//public methods
-	void readFile();//loads in prog.txt file, sorts and stores into vectors
-	void initCourse(vector<vector<string> > listOfcourseReq);
-	vector<Course> getFirstReq();
-	vector<Course> getSecReq();
-	vector<Course> getThirReq();
-	vector<Course> getFourReq();
-	vector<Course> getGroupA();
-	vector<Course> getGroupB();
-	vector<Course> getCompliReq();
-private:
-		string program; //stores program name
-		string filename; //stores name of file
-		vector<Course> coreFirstReq, coreSecReq, coreThirReq, coreFourReq, techGroupA, techGroupB;
-		vector<Course> compliReq;
+	void initialize();//loads in prog.txt file, sorts and stores into vectors
 
+private:
+		string program;
+		string filename; //stores name of file
+		vector<string> firstInsult, secInsult, thirdInsult; //vectors store insults
 };
 
 //File Exception returns error message given message received--> errors opening file
