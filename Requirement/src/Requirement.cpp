@@ -31,7 +31,7 @@ Requirement::Requirement(const string& program,const string& subProgram) {
 //Reads in .txt file and stores info
 void Requirement::readFile(){
 
-	vector< vector < string> > listOfcourseReq(7);//vector list of vectors to store file info
+	vector< vector < string> > listOfcourseReq(9);//vector list of vectors to store file info
 
 	string line;//line reading in
 
@@ -73,7 +73,7 @@ void Requirement::readFile(){
 
 
 void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
-	vector<vector<Course> > courseListObj(7);
+	vector<vector<Course> > courseListObj(9);
 
 		for (int i = 0; i < listOfcourseReq.size(); i++)
 		    {
@@ -93,9 +93,11 @@ void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 		coreSecReq=courseListObj[1];
 		coreThirReq=courseListObj[2];
 		coreFourReq=courseListObj[3];
-		compliReq=courseListObj[4];
+		elecReq=courseListObj[4];
 		techGroupA=courseListObj[5];
-		techGroupA=courseListObj[6];
+		techGroupB=courseListObj[6];
+		techGroupC=courseListObj[7];
+		techGroupD=courseListObj[8];
 }
 
 //Accessor Methods
@@ -117,10 +119,15 @@ vector<Course> Requirement::getGroupA(){
 vector<Course> Requirement::getGroupB(){
 	return techGroupB;
 }
-vector<Course> Requirement::getCompliReq(){
-	return compliReq;
+vector<Course> Requirement::getElectiveReq(){
+	return elecReq;
 }
-
+vector<Course> Requirement::getGroupC(){
+	return techGroupC;
+}
+vector<Course> Requirement::getGroupD(){
+	return techGroupD;
+}
 
 //File exceptions class exe. returns error message
 FileException::FileException(const string& message) : message(message) {}

@@ -25,12 +25,14 @@ public:
 	vector<Course> getFourReq();
 	vector<Course> getGroupA();
 	vector<Course> getGroupB();
-	vector<Course> getCompliReq();
+	vector<Course> getElectiveReq();
+	vector<Course> getGroupC();
+	vector<Course> getGroupD();
 private:
 		string program; //stores program name
 		string filename; //stores name of file
-		vector<Course> coreFirstReq, coreSecReq, coreThirReq, coreFourReq, techGroupA, techGroupB;
-		vector<Course> compliReq;
+		vector<Course> coreFirstReq, coreSecReq, coreThirReq, coreFourReq, techGroupA, techGroupB,techGroupC,techGroupD;
+		vector<Course> elecReq;
 
 };
 
