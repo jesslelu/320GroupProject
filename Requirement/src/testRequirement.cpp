@@ -4,7 +4,7 @@ using namespace std;
 #include "Course.h"
 
 int main() {
-	cout << "This will test requirements class." << endl; // prints !!!Hello World!!!
+	cout << "This will test requirements class." << endl;
 
 	Requirement req("Geological Engineering");
 

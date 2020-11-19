@@ -1,5 +1,9 @@
 /*
  * Requirement.cpp
+ * This class reads the .txt files containing all the course requirement information for different programs
+ * Stores each list in vector array of 'course' objects, and can be accessed using accessor methods
+ * EXCEPT one list stores number of credits/courses needed to be taken from tech elective list/complimentary elective list
+ * to fulfill requirements for that program.
  */
 
 #include "Requirement.h"
@@ -23,14 +27,16 @@ Requirement::Requirement(const string& programs) {
 	readFile();
 }
 
-//Constructor parameter: program name + subprogram name
+//Constructor parameter: program name + subprogram name--> SO far we have decided to just choose one subprogram.
+//inclusion of separate sub programs can be implemented later if time allows for it :/
 Requirement::Requirement(const string& program,const string& subProgram) {
 	// if program chosen has a sub program
 }
 
 //Reads in .txt file and stores info
 void Requirement::readFile(){
-
+	//list of lists
+	//initializing 'outer' list.--> this 'outer' list stores 9 lists of courses/electivenumber
 	vector< vector < string> > listOfcourseReq(9);//vector list of vectors to store file info
 
 	string line;//line reading in
@@ -88,7 +94,7 @@ void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 
 	//cout<<courseListObj[0][8].getCourseID()<<endl; <--Testing objects.
 
-		//Assiging them to private variables.
+		//Assigning them to private variables.
 		coreFirstReq=courseListObj[0];
 		coreSecReq=courseListObj[1];
 		coreThirReq=courseListObj[2];
@@ -101,6 +107,8 @@ void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 }
 
 //Accessor Methods
+
+//Getting CORE courses
 vector<Course> Requirement::getFirstReq(){
 	return coreFirstReq;
 }
@@ -113,14 +121,13 @@ vector<Course> Requirement::getThirReq(){
 vector<Course> Requirement::getFourReq(){
 	return coreFourReq;
 }
+
+//Getting Tech elective courses
 vector<Course> Requirement::getGroupA(){
 	return techGroupA;
 }
 vector<Course> Requirement::getGroupB(){
 	return techGroupB;
-}
-vector<Course> Requirement::getElectiveReq(){
-	return elecReq;
 }
 vector<Course> Requirement::getGroupC(){
 	return techGroupC;
@@ -128,6 +135,12 @@ vector<Course> Requirement::getGroupC(){
 vector<Course> Requirement::getGroupD(){
 	return techGroupD;
 }
+
+//get number of each tech elective
+vector<Course> Requirement::getElectiveReq(){
+	return elecReq;
+}
+
 
 //File exceptions class exe. returns error message
 FileException::FileException(const string& message) : message(message) {}
