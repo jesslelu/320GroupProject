@@ -25,7 +25,7 @@ public:
 	vector<Course> getFourReq();
 	vector<Course> getGroupA();
 	vector<Course> getGroupB();
-	vector<Course> getElectiveReq();
+	vector<string> getElectiveReq();
 	vector<Course> getGroupC();
 	vector<Course> getGroupD();
 private:
@@ -34,7 +34,7 @@ private:
 		int typeFlag;//flag for whether elective requirements are in credits or number of courses
 		//1 if in credits and 0 if in number of courses
 		vector<Course> coreFirstReq, coreSecReq, coreThirReq, coreFourReq, techGroupA, techGroupB,techGroupC,techGroupD;
-		vector<Course> elecReq;
+		vector<string> elecReq;
 
 };
 

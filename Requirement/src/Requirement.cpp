@@ -81,6 +81,8 @@ void Requirement::readFile(){
 	fileInAgain.close();
 
 	initCourse(listOfcourseReq);//Initialize stored course names as course objects
+	elecReq=listOfcourseReq[4];
+
 }
 
 
@@ -89,13 +91,14 @@ void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 
 		for (int i = 0; i < listOfcourseReq.size(); i++)
 		    {
-				//index starting at one to rid of titles
-		        for (int j = 1; j < listOfcourseReq[i].size(); j++)
-		        {
-		        	Course newCourse(listOfcourseReq[i][j]);//initializing new course
-		        	courseListObj[i].push_back(newCourse);
-		        }
-
+				if(i!=4){
+					//index starting at one to rid of titles
+					for (int j = 1; j < listOfcourseReq[i].size(); j++)
+					{
+						Course newCourse(listOfcourseReq[i][j]);//initializing new course
+						courseListObj[i].push_back(newCourse);
+					}
+				}
 		    }
 
 	//cout<<courseListObj[0][8].getCourseID()<<endl; <--Testing objects.
@@ -105,7 +108,7 @@ void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 		coreSecReq=courseListObj[1];
 		coreThirReq=courseListObj[2];
 		coreFourReq=courseListObj[3];
-		elecReq=courseListObj[4];
+
 		techGroupA=courseListObj[5];
 		techGroupB=courseListObj[6];
 		techGroupC=courseListObj[7];
@@ -143,7 +146,7 @@ vector<Course> Requirement::getGroupD(){
 }
 
 //get number of each tech elective
-vector<Course> Requirement::getElectiveReq(){
+vector<string> Requirement::getElectiveReq(){
 	return elecReq;
 }
 

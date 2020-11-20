@@ -16,7 +16,7 @@ int main() {
 
 	vector<Course> groupA=req.getGroupA();
 	vector<Course> groupB=req.getGroupB();
-	vector<Course> elecReq=req.getElectiveReq();
+	vector<string> elecReq=req.getElectiveReq();
 	vector<Course> groupC=req.getGroupC();
 	vector<Course> groupD=req.getGroupD();
 
@@ -45,7 +45,7 @@ int main() {
 
 	cout<<"Electives -------------------------"<<endl;
 		for(int i=0; i<elecReq.size();i++){
-			cout<<elecReq[i].getCourseID()<<endl;
+			cout<<elecReq[i]<<endl;
 			//cout<<" "<<endl;
 		}
 
