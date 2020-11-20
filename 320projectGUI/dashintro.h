@@ -16,7 +16,9 @@ public:
     ~dashIntro();
 
 private slots:
-    void on_backBtn_clicked();
+    void updateDis();
+
+    void on_dashBtn_clicked();
 
 private:
     Ui::dashIntro *ui;

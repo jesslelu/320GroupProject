@@ -29,6 +29,7 @@ void MainWindow::on_startNow_clicked()
 {
     screen2 = new Screen2();
     screen2->show();
+
     this->hide();
 
 }

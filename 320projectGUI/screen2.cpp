@@ -18,6 +18,7 @@ Screen2::Screen2(QWidget *parent) :
     ui->comboBox->addItem("Chemical Engineering");
     ui->comboBox->addItem("Engineering Chemistry");
     ui->comboBox->addItem("Civil Engineering");
+    discipline = "";
 
 }
 
@@ -28,7 +29,16 @@ Screen2::~Screen2()
 
 void Screen2::on_nextBtn_clicked()
 {
+    discipline = ui->comboBox->currentText();
     dashintro = new dashIntro();
+   // connect(this, SIGNAL(getDiscipline(QString)), &dashintro, SLOT(updateDis()(QString)));
     dashintro->show();
+
+
+
     this->hide();
+}
+
+QString Screen2::getDiscipline(){
+    return discipline;
 }

@@ -7,6 +7,7 @@ dashIntro::dashIntro(QWidget *parent) :
     ui(new Ui::dashIntro)
 {
     ui->setupUi(this);
+
 }
 
 dashIntro::~dashIntro()
@@ -14,8 +15,12 @@ dashIntro::~dashIntro()
     delete ui;
 }
 
-void dashIntro::on_backBtn_clicked()
+void dashIntro::updateDis(){
+ //   ui->disOut->setText(getDiscipline);
+}
+
+void dashIntro::on_dashBtn_clicked()
 {
-   // screen2.show();
-   // this->hide();
+    int year = (ui->dashBtn->text().toInt());
+
 }
