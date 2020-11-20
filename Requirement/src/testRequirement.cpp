@@ -5,8 +5,9 @@ using namespace std;
 
 int main() {
 	cout << "This will test requirements class." << endl;
-
-	Requirement req("Geological Engineering");
+	string progname="Mechanical Engineering";
+	cout << progname << endl;
+	Requirement req(progname);
 
 	vector<Course> firstYearReq=req.getFirstReq();
 	vector<Course> secYearReq=req.getSecReq();
@@ -41,6 +42,13 @@ int main() {
 		cout<<fourYearReq[i].getCourseID()<<endl;
 		//cout<<" "<<endl;
 	}
+
+	cout<<"Electives -------------------------"<<endl;
+		for(int i=0; i<elecReq.size();i++){
+			cout<<elecReq[i].getCourseID()<<endl;
+			//cout<<" "<<endl;
+		}
+
 	cout<<"group a -------------------------"<<endl;
 	for(int i=0; i<groupA.size();i++){
 		cout<<groupA[i].getCourseID()<<endl;

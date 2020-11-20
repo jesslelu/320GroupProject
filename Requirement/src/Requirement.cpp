@@ -53,15 +53,21 @@ void Requirement::readFile(){
 
 	//Loops through file adding courses to listOfcourseReq at index 0. detects blank, starts adding
 	//courses to index 1... and 2... and so on as blanks are detected
-	while (getline(fileInAgain,line)) {
 
-		line=line.substr (0,line.size()-1); //Getting rid of '\n' at end of each line
+	while (getline(fileInAgain,line)) {
+		//cout<<line.size()<<endl;
 		//cout<<line<<endl;
+		if(line.size()>=9||line.size()==1){
+			line=line.substr (0,line.size()-1);
+		}
+
 		if(line.empty()){//if blank detected, up index. and skip this line. start new array.
 			j=-1;
 			i++;
 			getline(fileInAgain,line);//Skipping blank and get to first course in list
-			line=line.substr (0,line.size()-1);
+			if(line.size()>=9){
+				line=line.substr (0,line.size()-1);
+			}
 		}
 
 		j++;
@@ -69,11 +75,11 @@ void Requirement::readFile(){
 
 		listOfcourseReq[i].push_back(line); //push course/line into
 
-
 	}
 
 
 	fileInAgain.close();
+
 	initCourse(listOfcourseReq);//Initialize stored course names as course objects
 }
 
