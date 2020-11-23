@@ -5,7 +5,10 @@ using namespace std;
 
 int main() {
 	cout << "This will test requirements class." << endl;
-	string progname="Mechanical Engineering";
+	string progname="Chemical Engineering";
+	//Have tested
+	//Mechanical Eng
+
 	cout << progname << endl;
 	Requirement req(progname);
 
