@@ -21,7 +21,10 @@ using namespace std;
 
 //Constructor parameter: program name
 Requirement::Requirement(const string& programs) {
+
+
 	program=programs;
+
 	filename=program+".txt";
 
 	readFile();
@@ -56,10 +59,13 @@ void Requirement::readFile(){
 
 	while (getline(fileInAgain,line)) {
 		//cout<<line.size()<<endl;
-		//cout<<line<<endl;
-		if(line.size()>=9||line.size()==1){
-			line=line.substr (0,line.size()-1);
+
+		if(i!=4){
+			if(line.size()>=9||line.size()==1){
+				line=line.substr (0,line.size()-1);
+			}
 		}
+
 
 		if(line.empty()){//if blank detected, up index. and skip this line. start new array.
 			j=-1;
@@ -71,30 +77,44 @@ void Requirement::readFile(){
 		}
 
 		j++;
-		//string temp=to_string(i)+" : "+line + "---- "+to_string(j); <-- used for testing.
-
+		//string temp=to_string(i)+" : "+line + "---- "+to_string(j);
+		try{
 		listOfcourseReq[i].push_back(line); //push course/line into
+		}catch(int e){
+			cout<<"Error adding line to list"<<endl;
+		}
+
 
 	}
 
 
 	fileInAgain.close();
 
+
+	try{
 	initCourse(listOfcourseReq);//Initialize stored course names as course objects
+	}catch(int e){
+		cout<<"Error initializing course as object"<<endl;
+	}
 	elecReq=listOfcourseReq[4];
+
 
 }
 
 
 void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 	vector<vector<Course> > courseListObj(9);
+	string courseCode;
 
 		for (int i = 0; i < listOfcourseReq.size(); i++)
 		    {
-				if(i!=4){
+				if(i!=4){//dont initialize elective count as course obejcts
 					//index starting at one to rid of titles
 					for (int j = 1; j < listOfcourseReq[i].size(); j++)
 					{
+
+						courseCode=listOfcourseReq[i][j];
+						replace(courseCode.begin(), courseCode.end(), ' ', '-');
 						Course newCourse(listOfcourseReq[i][j]);//initializing new course
 						courseListObj[i].push_back(newCourse);
 					}
