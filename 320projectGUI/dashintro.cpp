@@ -7,7 +7,7 @@ dashIntro::dashIntro(QWidget *parent) :
     ui(new Ui::dashIntro)
 {
     ui->setupUi(this);
-
+    ui->disOut->setReadOnly(true);
 }
 
 dashIntro::~dashIntro()
