@@ -9,20 +9,14 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    dashintro.cpp \
     main.cpp \
-    mainwindow.cpp \
-    screen2.cpp
+    mainwindow.cpp
 
 HEADERS += \
-    dashintro.h \
-    mainwindow.h \
-    screen2.h
+    mainwindow.h
 
 FORMS += \
-    dashintro.ui \
-    mainwindow.ui \
-    screen2.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
