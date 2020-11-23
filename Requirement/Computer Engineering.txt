@@ -93,6 +93,3 @@ SOFT 437
 Group C
 
 Group D
-
-
-

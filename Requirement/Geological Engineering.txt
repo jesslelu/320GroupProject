@@ -101,5 +101,3 @@ Group B
 Group C
 
 Group D
-
-
