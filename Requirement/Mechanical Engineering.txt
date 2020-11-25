@@ -42,6 +42,7 @@ MECH 460
 MECH 464
 
 Electives
+1
 GroupA:0
 GroupB:0
 GroupC:0

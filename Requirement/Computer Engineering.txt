@@ -43,6 +43,7 @@ CMPE 320
 ELEC 498
 
 Electives
+1
 Group A:0
 Group B:0
 Group C:0

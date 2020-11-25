@@ -68,16 +68,21 @@ void Requirement::readFile(){
 
 
 		if(line.empty()){//if blank detected, up index. and skip this line. start new array.
+
 			j=-1;
 			i++;
 			getline(fileInAgain,line);//Skipping blank and get to first course in list
+
+			cout<<line<<endl;
 			if(line.size()>=9){
 				line=line.substr (0,line.size()-1);
 			}
+
 		}
 
 		j++;
-		//string temp=to_string(i)+" : "+line + "---- "+to_string(j);
+		string temp=to_string(i)+" : "+line + "---- "+to_string(j);
+		//cout<<temp<<endl;
 		try{
 		listOfcourseReq[i].push_back(line); //push course/line into
 		}catch(int e){
@@ -96,8 +101,14 @@ void Requirement::readFile(){
 	}catch(int e){
 		cout<<"Error initializing course as object"<<endl;
 	}
-	elecReq=listOfcourseReq[4];
+	vector<string>templist=listOfcourseReq[4];
+	//elecReq=templist;
+	typeFlag=stoi(templist[1]);
 
+	for(int i=2;i<templist.size();i++){
+		elecReq.push_back(templist[i]);
+
+	}
 
 }
 
@@ -170,7 +181,9 @@ vector<string> Requirement::getElectiveReq(){
 	return elecReq;
 }
 
-
+int Requirement::getFlag(){
+	return typeFlag;
+}
 //File exceptions class exe. returns error message
 FileException::FileException(const string& message) : message(message) {}
 string& FileException::what() { return message; }

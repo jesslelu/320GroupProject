@@ -47,6 +47,7 @@ CHEE 470
 CHEE 412
 
 Electives
+0
 GroupA:0
 GroupB:0
 GroupC:0

@@ -42,14 +42,15 @@ ENPH 336
 ELEC 490
 
 Electives
-GroupA:0
+0
+GroupA:5
 GroupB:0
 GroupC:0
 GroupD:0
-List A:0
+List A:2
 List B:0
-Group:5
-List:3
+Group:0
+List:1
 
 Group A
 ELEC 270

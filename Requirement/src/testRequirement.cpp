@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	cout << "This will test requirements class." << endl;
-	string progname="Chemical Engineering";
+	string progname="Computer Engineering";
 	//Have tested
 	//Mechanical Eng
 
@@ -27,22 +27,22 @@ int main() {
 	//Testing.
 	for(int i=0; i<firstYearReq.size();i++){
 
-		cout<<firstYearReq[i].getCourseID()<<endl;
+		//cout<<firstYearReq[i].getCourseID()<<endl;
 		//cout<<" "<<endl;
 	}
 	cout<<"sec year -------------------------"<<endl;
 	for(int i=0; i<secYearReq.size();i++){
-		cout<<secYearReq[i].getCourseID()<<endl;
+		//cout<<secYearReq[i].getCourseID()<<endl;
 		//cout<<" "<<endl;
 	}
 	cout<<"thir year -------------------------"<<endl;
 	for(int i=0; i<thirYearReq.size();i++){
-		cout<<thirYearReq[i].getCourseID()<<endl;
+		//cout<<thirYearReq[i].getCourseID()<<endl;
 		//cout<<" "<<endl;
 	}
 	cout<<"fourth year -------------------------"<<endl;
 	for(int i=0; i<fourYearReq.size();i++){
-		cout<<fourYearReq[i].getCourseID()<<endl;
+		//cout<<fourYearReq[i].getCourseID()<<endl;
 		//cout<<" "<<endl;
 	}
 
@@ -72,5 +72,7 @@ int main() {
 		cout<<groupD[i].getCourseID()<<endl;
 		//cout<<" "<<endl;
 	}
+	cout<<"flag--------------------"<<endl;
+	cout<<req.getFlag()<<endl;
 	return 0;
 }

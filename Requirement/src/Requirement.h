@@ -28,6 +28,7 @@ public:
 	vector<string> getElectiveReq();
 	vector<Course> getGroupC();
 	vector<Course> getGroupD();
+	int getFlag();
 private:
 		string program; //stores program name
 		string filename; //stores name of file
