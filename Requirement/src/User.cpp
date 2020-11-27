@@ -140,7 +140,7 @@ void User::complimentaryComp(int Flag){
 	float groupBleft;
 	float groupCleft;
 	float groupDleft;
-
+	Flag=1;
 	if(Flag==1){//if requirements stored as number of minimum credits required, must get credits from user group courses
 		for(int i=0;i<userGroupA.size();i++){
 			GroupA+=userGroupA[i].getCredits();
@@ -164,19 +164,40 @@ void User::complimentaryComp(int Flag){
 		groupCleft=numgroupCNeeded-GroupC;
 		groupDleft=numgroupDNeeded-GroupD;
 
-		/*
+		cout<<"user group courses"<<endl;
+		cout<<GroupA<<endl;
+		cout<<GroupB<<endl;
+		cout<<GroupC<<endl;
+		cout<<GroupD<<endl;
+
+		cout<<"group courses needed"<<endl;
+		cout<<numgroupANeeded<<endl;
+		cout<<numgroupBNeeded<<endl;
+		cout<<numgroupCNeeded<<endl;
+		cout<<numgroupDNeeded<<endl;
+
 		float extraA;
 		float extraB;
 		float extraC;
 		float extraD;
-
+		cout<<"extra courses needed"<<endl;
 		if(groupAleft<=0){
-			cout<<"user has required groupA courses"<<endl;
+			extraA=groupAleft*-1;
+			cout<<extraA<<endl;
 		}
-		else if(groupBleft<=0){
+		if(groupBleft<=0){
+			extraB=groupBleft*-1;
+			cout<<extraB<<endl;
+		}
+		if(groupCleft<=0){
+			extraC=groupCleft*-1;
+			cout<<extraC<<endl;
+		}
+		if(groupDleft<=0){
+			extraD=groupDleft*-1;
+			cout<<extraD<<endl;
+		}
 
-		}
-		 */
 
 	}
 

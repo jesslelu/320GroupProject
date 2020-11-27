@@ -103,6 +103,7 @@ void Requirement::readFile(){
 	}
 	vector<string>templist=listOfcourseReq[4];
 	//elecReq=templist;
+
 	typeFlag=stoi(templist[1]);
 
 	for(int i=2;i<templist.size();i++){
