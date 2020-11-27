@@ -157,11 +157,27 @@ void User::complimentaryComp(int Flag){
 		}
 
 		//compare credits
-		//user credits minus number needed
+		//Needed credits -number of credits the user has
+		//gives us the number of credits that the user still has to take.
 		groupAleft=numgroupANeeded-GroupA;
 		groupBleft=numgroupBNeeded-GroupB;
 		groupCleft=numgroupCNeeded-GroupC;
 		groupDleft=numgroupDNeeded-GroupD;
+
+		/*
+		float extraA;
+		float extraB;
+		float extraC;
+		float extraD;
+
+		if(groupAleft<=0){
+			cout<<"user has required groupA courses"<<endl;
+		}
+		else if(groupBleft<=0){
+
+		}
+		 */
+
 	}
 
 
