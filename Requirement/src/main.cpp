@@ -27,11 +27,13 @@ int main() {
 
 
 	//User Us(vector<string> courses,string progname);
+
 	User user(courses,progName);
 	vector<Course> userGroupA=user.getUserGroupA();
 	vector<Course> userGroupB=user.getUserGroupB();
 	vector<Course> userGroupC=user.getUserGroupC();
 	vector<Course> userGroupD=user.getUserGroupD();
+	/*
 	cout << "Your groupa courses:" << endl;
 	for (int i = 0; i < (userGroupA.size()); i++) {
 		cout << userGroupA[i].getCourseID() << endl;

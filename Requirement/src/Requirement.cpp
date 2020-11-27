@@ -21,7 +21,7 @@ using namespace std;
 
 //Constructor parameter: program name
 Requirement::Requirement(const string& programs) {
-
+	cout<<"IN requirements"<<endl;
 
 	program=programs;
 
@@ -92,9 +92,7 @@ void Requirement::readFile(){
 
 	}
 
-
 	fileInAgain.close();
-
 
 	try{
 	initCourse(listOfcourseReq);//Initialize stored course names as course objects
@@ -103,7 +101,9 @@ void Requirement::readFile(){
 	}
 	vector<string>templist=listOfcourseReq[4];
 	//elecReq=templist;
-
+	cout<<"HEREEE"<<endl;
+	cout<<templist[0]<<endl;
+	cout<<templist[1]<<endl;
 	typeFlag=stoi(templist[1]);
 
 	for(int i=2;i<templist.size();i++){
