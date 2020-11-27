@@ -33,7 +33,7 @@ User::User(vector<string> courses,string prognames):userCourses(courses) {
 		groupB = req.getGroupB();
 		groupC = req.getGroupC();
 		groupD = req.getGroupD();
-		int Flag=req.getFlag();
+		Flag=req.getFlag();
 
 		//Find list of core courses user is missing
 		missingFirCourse=getMissing(firstYearReq);
@@ -55,8 +55,10 @@ User::User(vector<string> courses,string prognames):userCourses(courses) {
 		numgroupBNeeded=numRequired[1];
 		numgroupCNeeded=numRequired[2];
 		numgroupDNeeded=numRequired[3];
+
 		numListANeeded=numRequired[4];
 		numListBNeeded=numRequired[5];
+
 		numGroupNeeded=numRequired[6];
 		numListNeeded=numRequired[7];
 
@@ -64,14 +66,7 @@ User::User(vector<string> courses,string prognames):userCourses(courses) {
 		complimentaryComp(Flag);
 }
 void User::complimentaryCheck(){
-	/*
-	int numGroupA=0;
-	int numGroupB=0;
-	int numGroupC=0;
-	int numGroupD=0;
-	int numListA=0;
-	int numListB=0;
-	*/
+
 	cout<<"start compare"<<endl;
 	string comp;
 	string compA;
@@ -123,24 +118,13 @@ void User::complimentaryCheck(){
 
 }
 void User::complimentaryComp(int Flag){
-	//credits that user has in each group
-	float GroupA;
-	float GroupB;
-	float GroupC;
-	float GroupD;
+	//Stores the user info--> number of tech electives/credits in tech electives they currently have
+	float GroupA=0;
+	float GroupB=0;
+	float GroupC=0;
+	float GroupD=0;
 
-	//more credits or ccourses user needs to satisfy requirements
-	float moreGroupA;
-	int moreGroupC;
-	int moreGroupD;
-	int moreGroupB;
-	int moreGroupAB;
-
-	float groupAleft;
-	float groupBleft;
-	float groupCleft;
-	float groupDleft;
-	Flag=1;
+	//Flag=1;
 	if(Flag==1){//if requirements stored as number of minimum credits required, must get credits from user group courses
 		for(int i=0;i<userGroupA.size();i++){
 			GroupA+=userGroupA[i].getCredits();
@@ -156,62 +140,54 @@ void User::complimentaryComp(int Flag){
 		}
 
 	}else{
+		//Units are in number of courses
 		GroupA=userGroupA.size();
 		GroupB=userGroupB.size();
 		GroupC=userGroupC.size();
 		GroupD=userGroupD.size();
 
 	}
+
 	//compare credits
 	//Needed credits -number of credits the user has
 	//gives us the number of credits that the user still has to take.
-	groupAleft=numgroupANeeded-GroupA;
-	groupBleft=numgroupBNeeded-GroupB;
-	groupCleft=numgroupCNeeded-GroupC;
-	groupDleft=numgroupDNeeded-GroupD;
-
-	cout<<"user group courses"<<endl;
-	cout<<GroupA<<endl;
-	cout<<GroupB<<endl;
-	cout<<GroupC<<endl;
-	cout<<GroupD<<endl;
-
-	cout<<"group courses needed"<<endl;
-	cout<<numgroupANeeded<<endl;
-	cout<<numgroupBNeeded<<endl;
-	cout<<numgroupCNeeded<<endl;
-	cout<<numgroupDNeeded<<endl;
-	cout<<numGroupNeeded<<endl;
-	cout<<numListNeeded<<endl;
+	numgroupANeeded=numgroupANeeded-GroupA;
+	numgroupBNeeded=numgroupBNeeded-GroupB;
+	numgroupCNeeded=numgroupCNeeded-GroupC;
+	numgroupDNeeded=numgroupDNeeded-GroupD;
 
 	float extraA=0;
 	float extraB=0;
 	float extraC=0;
 	float extraD=0;
 	int totalGroupLeft=0;
-	int groupNeed=0;
 
-	cout<<"extra courses needed"<<endl;
-	if(groupAleft<=0){
-		extraA=groupAleft*-1;
-		cout<<extraA<<endl;
+	if(numgroupANeeded<=0){
+		extraA=numgroupANeeded*-1;
+		numgroupANeeded=0;
 	}
-	if(groupBleft<=0){
-		extraB=groupBleft*-1;
-		cout<<extraB<<endl;
+	if(numgroupBNeeded<=0){
+		extraB=numgroupBNeeded*-1;
+		numgroupBNeeded=0;
 	}
-	if(groupCleft<=0){
-		extraC=groupCleft*-1;
-		cout<<extraC<<endl;
+	if(numgroupCNeeded<=0){
+		extraC=numgroupCNeeded*-1;
+		numgroupCNeeded=0;
 	}
-	if(groupDleft<=0){
-		extraD=groupDleft*-1;
-		cout<<extraD<<endl;
+	if(numgroupDNeeded<=0){
+		extraD=numgroupDNeeded*-1;
+		numgroupDNeeded=0;
 	}
 
 	totalGroupLeft=extraA+extraB+extraC+extraD;
-	groupNeed=numGroupNeeded-totalGroupLeft;
+	numGroupNeeded=numGroupNeeded-totalGroupLeft;
 
+
+	if(numGroupNeeded<=0){
+
+			numGroupNeeded=0;
+			cout<<extraD<<endl;
+	}
 
 }
 vector<Course> User::getMissing(vector<Course> coreCourses){
@@ -239,7 +215,24 @@ return missingCourses;
 
 //Accessor methods
 
-
+//These return number of tech elecctives/number of tech credits user sill needs to take
+//check whether this value in credits or number of courses using getFLAG
+int User::getNumGroupANeeded(){
+	return numgroupANeeded;
+}
+int User::getNumGroupBNeeded(){
+	return numgroupBNeeded;
+}
+int User::getNumGroupCNeeded(){
+	return numgroupCNeeded;
+}
+int User::getNumGroupDNeeded(){
+	return numgroupDNeeded;
+}
+int User::getNumGroupNeeded(){
+	return numGroupNeeded;
+}
+//Returns the tech electives that the user is currently taking
 vector<Course> User::getUserGroupA(){
 	return userGroupA;
 }
@@ -256,6 +249,8 @@ vector<Course> User::getUserGroupD(){
 vector<Course> User::getUserCourses(){
 	return userCoursesObj;
 }
+
+//Returns the CORE courses that the user is still missing
 vector<Course> User::getMissingFirCourse(){
 	return missingFirCourse;
 }
@@ -270,6 +265,8 @@ vector<Course> User::getMissingFourCourse(){
 }
 
 
-
+int User::getFlag(){
+	return Flag;
+}
 
 
