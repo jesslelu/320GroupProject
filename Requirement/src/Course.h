@@ -17,8 +17,29 @@ class Course {
 public:
 	Course(const string& courseID);
 	string getCourseID();
+	string getName();
+	char getTerm();
+	string getDescription();
+	float getCredits();
+	float getCEAB();
+	vector <string> getPrereqs();
+	bool getListA();
+	bool getListB();
+	int getDesiredYear();
 private:
 	string courseID;
+	bool ListACheck();
+	bool ListBCheck();
+	string name;
+	string description;
+	float credits;
+	float CEAB;
+	vector <string> prereqs;
+	bool listA;
+	bool listB;
+	char term;
+	int desiredYear;
+	string code;
 };
 
 

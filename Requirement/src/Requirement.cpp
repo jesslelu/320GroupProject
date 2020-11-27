@@ -73,7 +73,7 @@ void Requirement::readFile(){
 			i++;
 			getline(fileInAgain,line);//Skipping blank and get to first course in list
 
-			cout<<line<<endl;
+			//cout<<line<<endl;
 			if(line.size()>=9){
 				line=line.substr (0,line.size()-1);
 			}
@@ -126,7 +126,8 @@ void Requirement::initCourse(vector<vector<string> > listOfcourseReq){
 
 						courseCode=listOfcourseReq[i][j];
 						replace(courseCode.begin(), courseCode.end(), ' ', '-');
-						Course newCourse(listOfcourseReq[i][j]);//initializing new course
+						//Course newCourse(listOfcourseReq[i][j]);//initializing new course
+						Course newCourse(courseCode);
 						courseListObj[i].push_back(newCourse);
 					}
 				}
