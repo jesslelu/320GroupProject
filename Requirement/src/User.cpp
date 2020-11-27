@@ -155,27 +155,13 @@ void User::complimentaryComp(int Flag){
 		for(int i=0;i<userGroupD.size();i++){
 			GroupD+=userGroupD[i].getCredits();
 		}
-/*
- * numgroupANeeded=numRequired[0];
-		numgroupBNeeded=numRequired[1];
-		numgroupCNeeded=numRequired[2];
-		numgroupDNeeded=numRequired[3];
-		numgListANeeded=numRequired[4];
-		numListBNeeded=numRequired[5];
-		numgroupNeeded=numRequired[6];
-		numListNeeded=numRequired[7];
- */
+
 		//compare credits
 		//user credits minus number needed
-		groupAleft=GroupA-numgroupANeeded;
-		groupBleft=GroupB-numgroupBNeeded;
-		groupCleft=GroupC-numgroupCNeeded;
-		groupDleft=GroupD-numgroupDNeeded;
-		if(groupAleft>0)
-
-	}
-	else{
-
+		groupAleft=numgroupANeeded-GroupA;
+		groupBleft=numgroupBNeeded-GroupB;
+		groupCleft=numgroupCNeeded-GroupC;
+		groupDleft=numgroupDNeeded-GroupD;
 	}
 
 
