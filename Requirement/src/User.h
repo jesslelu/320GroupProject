@@ -35,10 +35,11 @@ private:
 	int numgroupCNeeded;
 	int numgroupDNeeded;
 
-	int numgroupNeeded;
-	int numgListANeeded;
-	int numListBNeeded;
+	int numGroupNeeded;
 	int numListNeeded;
+
+	int numListANeeded;
+	int numListBNeeded;
 
 	vector<Course>userGroupA;
 	vector<Course>userGroupB;

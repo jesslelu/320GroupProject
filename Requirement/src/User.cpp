@@ -55,9 +55,9 @@ User::User(vector<string> courses,string prognames):userCourses(courses) {
 		numgroupBNeeded=numRequired[1];
 		numgroupCNeeded=numRequired[2];
 		numgroupDNeeded=numRequired[3];
-		numgListANeeded=numRequired[4];
+		numListANeeded=numRequired[4];
 		numListBNeeded=numRequired[5];
-		numgroupNeeded=numRequired[6];
+		numGroupNeeded=numRequired[6];
 		numListNeeded=numRequired[7];
 
 		complimentaryCheck();
@@ -124,10 +124,10 @@ void User::complimentaryCheck(){
 }
 void User::complimentaryComp(int Flag){
 	//credits that user has in each group
-	float GroupA=0;
-	float GroupB=0;
-	float GroupC=0;
-	float GroupD=0;
+	float GroupA;
+	float GroupB;
+	float GroupC;
+	float GroupD;
 
 	//more credits or ccourses user needs to satisfy requirements
 	float moreGroupA;
@@ -144,7 +144,6 @@ void User::complimentaryComp(int Flag){
 	if(Flag==1){//if requirements stored as number of minimum credits required, must get credits from user group courses
 		for(int i=0;i<userGroupA.size();i++){
 			GroupA+=userGroupA[i].getCredits();
-
 		}
 		for(int i=0;i<userGroupB.size();i++){
 			GroupB+=userGroupB[i].getCredits();
@@ -156,51 +155,62 @@ void User::complimentaryComp(int Flag){
 			GroupD+=userGroupD[i].getCredits();
 		}
 
-		//compare credits
-		//Needed credits -number of credits the user has
-		//gives us the number of credits that the user still has to take.
-		groupAleft=numgroupANeeded-GroupA;
-		groupBleft=numgroupBNeeded-GroupB;
-		groupCleft=numgroupCNeeded-GroupC;
-		groupDleft=numgroupDNeeded-GroupD;
-
-		cout<<"user group courses"<<endl;
-		cout<<GroupA<<endl;
-		cout<<GroupB<<endl;
-		cout<<GroupC<<endl;
-		cout<<GroupD<<endl;
-
-		cout<<"group courses needed"<<endl;
-		cout<<numgroupANeeded<<endl;
-		cout<<numgroupBNeeded<<endl;
-		cout<<numgroupCNeeded<<endl;
-		cout<<numgroupDNeeded<<endl;
-
-		float extraA;
-		float extraB;
-		float extraC;
-		float extraD;
-		cout<<"extra courses needed"<<endl;
-		if(groupAleft<=0){
-			extraA=groupAleft*-1;
-			cout<<extraA<<endl;
-		}
-		if(groupBleft<=0){
-			extraB=groupBleft*-1;
-			cout<<extraB<<endl;
-		}
-		if(groupCleft<=0){
-			extraC=groupCleft*-1;
-			cout<<extraC<<endl;
-		}
-		if(groupDleft<=0){
-			extraD=groupDleft*-1;
-			cout<<extraD<<endl;
-		}
-
+	}else{
+		GroupA=userGroupA.size();
+		GroupB=userGroupB.size();
+		GroupC=userGroupC.size();
+		GroupD=userGroupD.size();
 
 	}
+	//compare credits
+	//Needed credits -number of credits the user has
+	//gives us the number of credits that the user still has to take.
+	groupAleft=numgroupANeeded-GroupA;
+	groupBleft=numgroupBNeeded-GroupB;
+	groupCleft=numgroupCNeeded-GroupC;
+	groupDleft=numgroupDNeeded-GroupD;
 
+	cout<<"user group courses"<<endl;
+	cout<<GroupA<<endl;
+	cout<<GroupB<<endl;
+	cout<<GroupC<<endl;
+	cout<<GroupD<<endl;
+
+	cout<<"group courses needed"<<endl;
+	cout<<numgroupANeeded<<endl;
+	cout<<numgroupBNeeded<<endl;
+	cout<<numgroupCNeeded<<endl;
+	cout<<numgroupDNeeded<<endl;
+	cout<<numGroupNeeded<<endl;
+	cout<<numListNeeded<<endl;
+
+	float extraA=0;
+	float extraB=0;
+	float extraC=0;
+	float extraD=0;
+	int totalGroupLeft=0;
+	int groupNeed=0;
+
+	cout<<"extra courses needed"<<endl;
+	if(groupAleft<=0){
+		extraA=groupAleft*-1;
+		cout<<extraA<<endl;
+	}
+	if(groupBleft<=0){
+		extraB=groupBleft*-1;
+		cout<<extraB<<endl;
+	}
+	if(groupCleft<=0){
+		extraC=groupCleft*-1;
+		cout<<extraC<<endl;
+	}
+	if(groupDleft<=0){
+		extraD=groupDleft*-1;
+		cout<<extraD<<endl;
+	}
+
+	totalGroupLeft=extraA+extraB+extraC+extraD;
+	groupNeed=numGroupNeeded-totalGroupLeft;
 
 
 }
