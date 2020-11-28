@@ -8,9 +8,20 @@
 #ifndef USER_H_
 #define USER_H_
 
+#include <fstream>
+#include "Course.h"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+#include <cstdlib>
+#include<cstdio>
+#include <cstddef>
+
 class User {
 public:
-	User(vector<string> courses,string progname);
+	User(vector<string> courses, string progname);
 	vector<Course> getMissing(vector<Course> year);
 	vector<Course> getUserCourses();
 
@@ -35,6 +46,9 @@ public:
 	int getNumGroupDNeeded();
 	int getNumGroupNeeded();
 	int getFlag();
+
+	void addCourse(string input);
+	void removeCourse(string input);
 
 private:
 	vector<string> userCourses;
@@ -70,6 +84,12 @@ private:
 	vector<Course> groupD;
 	vector<Course> ListA;
 	vector<Course> ListB;
+
+	vector<Course> firstYearReq;
+	vector<Course> secYearReq;
+	vector<Course> thirYearReq;
+	vector<Course> fourYearReq;
+
 
 };
 
