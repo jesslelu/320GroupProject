@@ -28,6 +28,8 @@ public:
 	void complimentaryCheck();
 	void complimentaryComp(int flag);
 
+	int compCheck(); // complementary check
+
 	//Accessor Methods!
 	vector<Course> getMissingFirCourse();//Returns first year core courses user still needs
 	vector<Course> getMissingSecCourse();
@@ -49,6 +51,10 @@ public:
 
 	void addCourse(string input);
 	void removeCourse(string input);
+
+	// checks for list A and B complementary courses
+	bool ListACheck(const string& courseID);
+	bool ListBCheck(const string& courseID);
 
 private:
 	vector<string> userCourses;

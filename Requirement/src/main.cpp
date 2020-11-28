@@ -28,6 +28,10 @@ int main() {
 
 	courses.push_back("APSC-293");//second year courses
 
+	// complementary courses test
+	courses.push_back("BISC-100"); // list A complementary course
+	courses.push_back("APSC-223"); // list B complementary course
+
 
 	User user(courses, progName);
 	vector<Course>userCourseList = user.getUserCourses();
@@ -42,7 +46,7 @@ int main() {
 	vector<Course> userGroupC = user.getUserGroupC();
 	vector<Course> userGroupD = user.getUserGroupD();
 
-	user.addCourse("APSC-223");
+	user.addCourse("APSC-223"); // complementary course
 	user.removeCourse("APSC-293");
 
 	userCourseList = user.getUserCourses();
@@ -134,6 +138,13 @@ int main() {
 	cout << dis << endl;
 	dis = "User needs " + group + type + "from any Group: A/B/C/D";
 	cout << dis << endl;
+
+	// displaying number of complementary courses still remaining
+	// ----------------------------
+	cout << "Complementary courses remaining:" << endl;
+	int compRem = user.compCheck();
+	cout << compRem << endl;
+	// ----------------------------
 
 	return 0;
 
