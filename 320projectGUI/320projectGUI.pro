@@ -9,17 +9,20 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addcoursewindow.cpp \
     dashintro.cpp \
     main.cpp \
     mainwindow.cpp \
     screen2.cpp
 
 HEADERS += \
+    addcoursewindow.h \
     dashintro.h \
     mainwindow.h \
     screen2.h
 
 FORMS += \
+    addcoursewindow.ui \
     dashintro.ui \
     mainwindow.ui \
     screen2.ui
