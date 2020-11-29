@@ -2,6 +2,7 @@
 #define DASHINTRO_H
 
 #include <QWidget>
+#include <dashboard.h>
 
 namespace Ui {
 class dashIntro;
@@ -22,6 +23,7 @@ private slots:
 
 private:
     Ui::dashIntro *ui;
+    DashBoard *dashboard1;
 };
 
 #endif // DASHINTRO_H

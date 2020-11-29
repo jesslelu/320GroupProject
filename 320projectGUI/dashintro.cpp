@@ -1,13 +1,14 @@
 #include "dashintro.h"
 #include "ui_dashintro.h"
 #include "screen2.h"
+#include "dashboard.h"
 
 dashIntro::dashIntro(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::dashIntro)
 {
     ui->setupUi(this);
-    ui->disOut->setReadOnly(true);
+  //  ui->disOut->setReadOnly(true);
 }
 
 dashIntro::~dashIntro()
@@ -21,6 +22,10 @@ void dashIntro::updateDis(){
 
 void dashIntro::on_dashBtn_clicked()
 {
-    int year = (ui->dashBtn->text().toInt());
+   // int year = (ui->dashBtn->text().toInt());
+    dashboard1 = new DashBoard();
+    dashboard1->show();
+
+    this->hide();
 
 }
