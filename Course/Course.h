@@ -2,6 +2,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "readAPI.h"
 using namespace std;
 
 
@@ -16,19 +17,17 @@ private:
 
 class Course {
 public:
-	Course(); 
+
 	Course(string coursecode, int year);
 	string getName();
-	char getTerm();
 	string getDescription();
 	float getCredits();
-	float getCEAB();
-	vector <string> getPrereqs();
+	vector<float> getCEAB();
+	string getPrereqs();
 	bool getListA();
 	bool getListB();
-	char getTerm();
 	int getDesiredYear();
-	
+
 
 
 private:
@@ -37,28 +36,12 @@ private:
 	string name;
 	string description;
 	float credits;
-	float CEAB;
-	vector <string> prereqs;
+	vector<float> CEAB;
+	string prereqs;
 	bool listA;
 	bool listB;
-	char term;
-	int desiredYear; 
-	string code; 
+	int desiredYear;
+	string code;
 
 };
 
-class readAPI {
-public:
-
-	readAPI(string coursecode);
-	string getName();
-	char getTerm();
-	string getDescription();
-	float getCredits();
-	float getCEAB();
-	vector <string> getPrereqs();
-	
-private:
-	string text; 
-
-};
