@@ -11,6 +11,8 @@ string& CourseException::what() { return message; }
 
 
 Course::Course(string coursecode, int year) { //The default constructor
+if (year<1||year>4)
+	throw CourseException("Invalid year");
    try {
     this->desiredYear = year;
 
