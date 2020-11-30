@@ -1,9 +1,4 @@
-/*
- * fraction_20113081.cpp
- *
- *  Created on: Oct 14, 2020
- *      Author: Kyle McLellan
- */
+
 #include <iostream>
 #include <string>
 #include <vector> 
@@ -16,7 +11,9 @@ string& CourseException::what() { return message; }
 
 
 Course::Course(string coursecode, int year) { //The default constructor
+   try {
     this->desiredYear = year;
+
     readAPI info = readAPI(coursecode);
     this->code = coursecode;
     this->name = info.getName();
@@ -29,6 +26,11 @@ Course::Course(string coursecode, int year) { //The default constructor
         this->listB = false;
     else if (this->listA == false)
         this->listB = ListBCheck();
+   }
+   catch (APIException& e) {
+       cout <<  e.what() << endl;
+       throw CourseException("Could not create Course");
+   }
 }
 
 vector<float> Course::getCEAB() {

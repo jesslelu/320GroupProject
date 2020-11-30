@@ -1,0 +1,2 @@
+C:\Users\Kyle\Documents\hope\320projectGUI\debug\320projectGUI.exe
+C:\Users\Kyle\Documents\hope\320projectGUI\debug\320projectGUI.pdb
