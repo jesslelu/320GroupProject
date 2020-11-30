@@ -11,45 +11,35 @@ int main() {
 	//GUI code imitation
 	string name; // stores name;
 	vector<string> courses; // stores user input courses
+
+
 	string progName = "Chemical-Engineering";
-
-	courses.push_back("APSC-132");//first year courses
-
-	courses.push_back("MECH-435");//groupA
-	//courses.push_back("MECH-437");//groupA
-
-	//courses.push_back("ENCH-312");//groupB
-	//courses.push_back("ENCH-326");
-	//courses.push_back("ENCH-411");
-	/*
-	courses.push_back("BIOL-102");//groupC
-	courses.push_back("BIOL-103");
-	*/
-
-	courses.push_back("APSC-293");//second year courses
-
-	// complementary courses test
-	courses.push_back("BISC-100"); // list A complementary course
-	courses.push_back("APSC-223"); // list B complementary course
-
-
-	User user(courses, progName);
+	User user(progName);
 	vector<Course>userCourseList = user.getUserCourses();
 
+	//Adding user courses
+	user.addCourse("APSC-132",1,"F");//groupA
+	user.addCourse("MECH-435",1,"F");//groupa
+	user.addCourse("ENCH-312",1,"F");//groub
+	user.addCourse("ENCH-411",1,"F");//groupb
+	user.addCourse("BIOL-102",1,"F");//groupc
+	user.addCourse("APSC-293",1,"F");//groupc
+
+	vector<Course>userCourseLists = user.getUserCourses(); //Get courses
+
 	cout << "DISPLAYING USER courses:" << endl;
-	for (int i = 0; i < (userCourseList.size()); i++) {
-		cout << userCourseList[i].getCourseID() << endl;
+	for (int i = 0; i < (userCourseLists.size()); i++) {
+		cout << userCourseLists[i].getCourseID() << endl;
 
 	}
+
+	user.removeCourse("APSC-293");
+	vector<Course>userCourse= user.getUserCourses(); //Get courses
+
 	vector<Course> userGroupA = user.getUserGroupA();
 	vector<Course> userGroupB = user.getUserGroupB();
 	vector<Course> userGroupC = user.getUserGroupC();
 	vector<Course> userGroupD = user.getUserGroupD();
-
-	user.addCourse("APSC-223"); // complementary course
-	user.removeCourse("APSC-293");
-
-	userCourseList = user.getUserCourses();
 
 	cout << "DISPLAYING USER courses:" << endl;
 	for (int i = 0; i < (userCourseList.size()); i++) {
@@ -145,7 +135,6 @@ int main() {
 	int compRem = user.compCheck();
 	cout << compRem << endl;
 	// ----------------------------
-
-	return 0;
+return 0;
 
 }

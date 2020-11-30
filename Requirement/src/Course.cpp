@@ -1,32 +1,55 @@
 /*
- * Course.cpp
+ * fraction_20113081.cpp
  *
- *  Created on: Nov. 12, 2020
- *      Author: jessielu
+ *  Created on: Oct 14, 2020
+ *      Author: Kyle McLellan
  */
-
+#include <iostream>
+#include <string>
+#include <vector>
 #include "Course.h"
+#include "readAPI.h"
+using namespace std;
 
-Course::Course(const string& courseID) : courseID(courseID) {
-    // TODO Auto-generated constructor stub
-    //string getCourseID();
+CourseException::CourseException(const string& message) : message(message) {} //Fraction Exception Class
+string& CourseException::what() { return message; }
+
+Course::Course(string coursecode) {
     this->desiredYear = 0;
-    this->name = "test course";
-    this->description = "A fake course for testing purposes";
-    this->CEAB = 0.0;
+    //readAPI info = readAPI(coursecode);
+    this->CourseID = coursecode;
+    this->name = "Course Name";
+    this->description = "This is an eng course";
+    //this->CEAB = info.getCEAB();
     this->credits = 3.0;
-    this->term = 'F';
-    this->listA = true;
-    this->listB = true;
+    //this->prereqs = info.getPrereqs();
+}
+Course::Course(string coursecode, int year,string term) { //The default constructor
+    this->desiredYear = 0;
+    //readAPI info = readAPI(coursecode);
+    this->CourseID = coursecode;
+    this->name = "Course Name";
+    this->description = "This is an engineering course...";
+    //this->CEAB = info.getCEAB();
+    this->credits = 3.0;
+    //this->prereqs = info.getPrereqs();
 
 }
-
-string Course::getCourseID() {
-    return courseID;
+/*
+Course::Course(string coursecode, int year,string term) { //The default constructor
+    this->desiredYear = year;
+    readAPI info = readAPI(coursecode);
+    this->CourseID = coursecode;
+    this->name = info.getName();
+    this->description = info.getDescription();
+    this->CEAB = info.getCEAB();
+    this->credits = info.getCredits();
+    this->prereqs = info.getPrereqs();
 
 }
+*/
 
-float Course::getCEAB() {
+vector<float> Course::getCEAB() {
     return this->CEAB;
 }
 
@@ -37,22 +60,19 @@ float Course::getCredits() {
 string Course::getName() {
     return this->name;
 }
-
+string Course::getCourseID(){
+	return CourseID;
+}
 string Course::getDescription() {
     return this->description;
 }
-char Course::getTerm() {
-    return this->term;
-}
-vector <string> Course::getPrereqs() {
+//char Course::getTerm() {
+  //  return this->term;
+//}
+string Course::getPrereqs() {
     return this->prereqs;
 }
-bool Course::getListA() {
-    return this->listA;
-}
-bool Course::getListB() {
-    return this->listB;
-}
+
 int Course::getDesiredYear() {
     return this->desiredYear;
 }

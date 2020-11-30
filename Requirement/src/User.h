@@ -22,12 +22,13 @@
 class User {
 public:
 	User(vector<string> courses, string progname);
+	User(string progname);
 	vector<Course> getMissing(vector<Course> year);
 	vector<Course> getUserCourses();
 
 	void complimentaryCheck();
 	void complimentaryComp(int flag);
-
+    void storeRequirements(string progNames);
 	int compCheck(); // complementary check
 
 	//Accessor Methods!
@@ -49,7 +50,7 @@ public:
 	int getNumGroupNeeded();
 	int getFlag();
 
-	void addCourse(string input);
+	void addCourse(string input,int year, string term);
 	void removeCourse(string input);
 
 	// checks for list A and B complementary courses

@@ -11,60 +11,26 @@ using namespace std;
 #include "Course.h"
 #include "User.h"
 
-User::User(vector<string> courses, string prognames) :userCourses(courses) {
+//the one we are using
+User::User(string progNames){
+	storeRequirements(progNames);
 
+}
+//the one we prob arunt using
+User::User(vector<string> courses, string progNames) :userCourses(courses) {
+
+	//userCourses
 
 	//Initializing courses as objects, store in private var
 	for (int i = 0; i < courses.size(); i++) {
-		Course newCourse(courses[i]);
-		userCoursesObj.push_back(newCourse);
+		Course newCourses(courses[i]);
+		userCoursesObj.push_back(newCourses);
 	}
 
-	//initializing requirements object
-	Requirement req(prognames);
-
-	//Getting requirements from requirements class
-	firstYearReq = req.getFirstReq();
-	secYearReq = req.getSecReq();
-	thirYearReq = req.getThirReq();
-	fourYearReq = req.getFourReq();
-	vector<string> elecReq = req.getElectiveReq();
-	groupA = req.getGroupA();
-	groupB = req.getGroupB();
-	groupC = req.getGroupC();
-	groupD = req.getGroupD();
-	Flag = req.getFlag();
-
-	//Find list of core courses user is missing
-	missingFirCourse = getMissing(firstYearReq);
-	missingSecCourse = getMissing(secYearReq);
-	missingThirCourse = getMissing(thirYearReq);
-	missingFourCourse = getMissing(fourYearReq);
-
-
-	//extracting meaningful info from electives. (the actual number)
-	vector<int> numRequired(8);
-	string newstring;
-	for (int i = 0; i < elecReq.size(); i++) {
-		//cout << elecReq[i] << endl;
-		size_t found = elecReq[i].find(':');
-		newstring = elecReq[i].substr(found + 1, elecReq[i].size());
-		numRequired[i] = stoi(newstring);
-	}
-	numgroupANeeded = numRequired[0];
-	numgroupBNeeded = numRequired[1];
-	numgroupCNeeded = numRequired[2];
-	numgroupDNeeded = numRequired[3];
-
-	numListANeeded = numRequired[4];
-	numListBNeeded = numRequired[5];
-
-	numGroupNeeded = numRequired[6];
-	numListNeeded = numRequired[7];
-
-	complimentaryCheck();
-	complimentaryComp(Flag);
+	storeRequirements(progNames);
 }
+
+
 void User::complimentaryCheck() {
 
 	cout << "start compare" << endl;
@@ -116,6 +82,53 @@ void User::complimentaryCheck() {
 	}//end of for loop
 
 
+}
+
+void User::storeRequirements(string progNames){
+	//initializing requirements object
+		Requirement req(progNames);
+
+		//Getting requirements from requirements class
+		firstYearReq = req.getFirstReq();
+		secYearReq = req.getSecReq();
+		thirYearReq = req.getThirReq();
+		fourYearReq = req.getFourReq();
+		vector<string> elecReq = req.getElectiveReq();
+		groupA = req.getGroupA();
+		groupB = req.getGroupB();
+		groupC = req.getGroupC();
+		groupD = req.getGroupD();
+		Flag = req.getFlag();
+
+		//Find list of core courses user is missing
+		missingFirCourse = getMissing(firstYearReq);
+		missingSecCourse = getMissing(secYearReq);
+		missingThirCourse = getMissing(thirYearReq);
+		missingFourCourse = getMissing(fourYearReq);
+
+
+		//extracting meaningful info from electives. (the actual number)
+		vector<int> numRequired(8);
+		string newstring;
+		for (int i = 0; i < elecReq.size(); i++) {
+			//cout << elecReq[i] << endl;
+			size_t found = elecReq[i].find(':');
+			newstring = elecReq[i].substr(found + 1, elecReq[i].size());
+			numRequired[i] = stoi(newstring);
+		}
+		numgroupANeeded = numRequired[0];
+		numgroupBNeeded = numRequired[1];
+		numgroupCNeeded = numRequired[2];
+		numgroupDNeeded = numRequired[3];
+
+		numListANeeded = numRequired[4];
+		numListBNeeded = numRequired[5];
+
+		numGroupNeeded = numRequired[6];
+		numListNeeded = numRequired[7];
+
+		complimentaryCheck();
+		complimentaryComp(Flag);
 }
 void User::complimentaryComp(int Flag) {
 	//Stores the user info--> number of tech electives/credits in tech electives they currently have
@@ -270,10 +283,12 @@ int User::getFlag() {
 	return Flag;
 }
 
-void User::addCourse(string input) {
-	Course newCourse(input);
+void User::addCourse(string input,int year, string term) {
+	Course newestCourse(input,year,term);
+	cout<<input<<endl;
+	//cout<<newCourse.getCourseID()<<endl;
 	userCourses.push_back(input);
-	userCoursesObj.push_back(newCourse);
+	userCoursesObj.push_back(newestCourse);
 
 	missingFirCourse = getMissing(firstYearReq);
 	missingSecCourse = getMissing(secYearReq);
@@ -285,7 +300,7 @@ void User::addCourse(string input) {
 }
 
 void User::removeCourse(string input) {
-	Course newCourse(input);
+	//Course newCourses(input);
 
 	for (int i = 0; i < userCoursesObj.size(); i++) {
 		if (input == userCoursesObj[i].getCourseID()) {
@@ -301,7 +316,6 @@ void User::removeCourse(string input) {
 
 	complimentaryCheck();
 	complimentaryComp(Flag);
-
 
 }
 
