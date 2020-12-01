@@ -1,5 +1,6 @@
 #include "addcoursewindow.h"
 #include "ui_addcoursewindow.h"
+#include "dashboard.h"
 #include "QString"
 
 addCourseWindow::addCourseWindow(QWidget *parent) :
@@ -17,5 +18,5 @@ addCourseWindow::~addCourseWindow()
 void addCourseWindow::on_addBtn_clicked()
 {
     QString newCourse = ui->courseIn->text();
-
+    //newClassAdded();
 }

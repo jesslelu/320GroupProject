@@ -16,9 +16,12 @@ public:
     explicit DashBoard(QWidget *parent = nullptr);
     ~DashBoard();
 
+
 private slots:
     void on_pushButton_clicked();
 
+signals:
+    void newClassAdded();
 private:
     Ui::DashBoard *ui;
     addCourseWindow *coursewindow1;

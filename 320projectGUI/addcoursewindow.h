@@ -16,6 +16,8 @@ public:
     ~addCourseWindow();
 
 private slots:
+
+signals:
     void on_addBtn_clicked();
 
 private:
