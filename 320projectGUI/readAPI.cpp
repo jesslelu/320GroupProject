@@ -7,7 +7,6 @@ readAPI::readAPI(string coursecode) {
 	cpr::Response r = cpr::Get(cpr::Url{ "https://api.qmulus.io/v1/courses/" + coursecode + "?token=eb507c002ce711ebbab92dcdc6160728" });
 	r.header["application/json"];
 	try {
-		//auto j2 = json::parse(r.text);
 		std::string test = r.text;
 		j = json::parse(test);
 	}
@@ -43,6 +42,3 @@ float readAPI::getCredits() {
 std::vector<float> readAPI::getCEAB() {
 	return CEAB;
 }
-//int readAPI::getYear() {
-//	return year;
-//}

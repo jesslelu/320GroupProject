@@ -1,24 +1,2 @@
-﻿  Uic'ing dashboard.ui...
-  Course.cpp
-  Requirement.cpp
-  User.cpp
-  dashboard.cpp
-C:\Users\Kyle\Documents\hope\320projectGUI\Course.cpp(27,39): warning C4100: 'year': unreferenced formal parameter
-C:\Users\Kyle\Documents\hope\320projectGUI\Requirement.cpp(35,63): warning C4100: 'subProgram': unreferenced formal parameter
-C:\Users\Kyle\Documents\hope\320projectGUI\Requirement.cpp(35,40): warning C4100: 'program': unreferenced formal parameter
-C:\Users\Kyle\Documents\hope\320projectGUI\Requirement.cpp(89,14): warning C4101: 'e': unreferenced local variable
-C:\Users\Kyle\Documents\hope\320projectGUI\Requirement.cpp(101,13): warning C4101: 'e': unreferenced local variable
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(158,27): warning C4244: '=': conversion from 'unsigned __int64' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(159,27): warning C4244: '=': conversion from 'unsigned __int64' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(160,27): warning C4244: '=': conversion from 'unsigned __int64' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(161,27): warning C4244: '=': conversion from 'unsigned __int64' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(168,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(169,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(170,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(171,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(180,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(184,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(188,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(192,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Kyle\Documents\hope\320projectGUI\User.cpp(196,44): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+﻿  dashboard.cpp
   320projectGUI.vcxproj -> C:\Users\Kyle\Documents\hope\320projectGUI\debug\320projectGUI.exe

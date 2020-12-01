@@ -58,6 +58,9 @@ public:
     QLineEdit *lineEdit;
     QLabel *label_3;
     QComboBox *comboBox;
+    QLineEdit *lineEdit_5;
+    QLineEdit *yearIn;
+    QPushButton *submitBtn;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -288,6 +291,24 @@ public:
         comboBox = new QComboBox(centralwidget);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(180, 120, 201, 41));
+        lineEdit_5 = new QLineEdit(centralwidget);
+        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+        lineEdit_5->setGeometry(QRect(440, 110, 131, 61));
+        lineEdit_5->setFont(font5);
+        lineEdit_5->setStyleSheet(QString::fromUtf8(" QLineEdit {\n"
+"     border: 2px solid lightblue;\n"
+"     border-radius: 20px;\n"
+"     padding: 0 8px;\n"
+"     background: lightblue;\n"
+"     selection-background-color: darkgray;\n"
+" }"));
+        lineEdit_5->setReadOnly(true);
+        yearIn = new QLineEdit(centralwidget);
+        yearIn->setObjectName(QString::fromUtf8("yearIn"));
+        yearIn->setGeometry(QRect(590, 120, 111, 41));
+        submitBtn = new QPushButton(centralwidget);
+        submitBtn->setObjectName(QString::fromUtf8("submitBtn"));
+        submitBtn->setGeometry(QRect(800, 130, 161, 23));
         DashBoard->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DashBoard);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -457,6 +478,8 @@ public:
         label->setText(QCoreApplication::translate("DashBoard", "Your Dashboard", nullptr));
         lineEdit->setText(QCoreApplication::translate("DashBoard", "Degree : ", nullptr));
         label_3->setText(QCoreApplication::translate("DashBoard", "Course Code", nullptr));
+        lineEdit_5->setText(QCoreApplication::translate("DashBoard", "Year:", nullptr));
+        submitBtn->setText(QCoreApplication::translate("DashBoard", "Submit Degree and Year", nullptr));
     } // retranslateUi
 
 };

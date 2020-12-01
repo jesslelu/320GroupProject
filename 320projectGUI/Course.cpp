@@ -24,6 +24,7 @@ Course::Course(string coursecode) {
     this->credits = 3.0;
     //this->prereqs = info.getPrereqs();
 }
+/*
 Course::Course(string coursecode, int year,string term) { //The default constructor
     this->desiredYear = 0;
     //readAPI info = readAPI(coursecode);
@@ -35,7 +36,8 @@ Course::Course(string coursecode, int year,string term) { //The default construc
     //this->prereqs = info.getPrereqs();
 
 }
-/*
+*/
+
 Course::Course(string coursecode, int year,string term) { //The default constructor
     this->desiredYear = year;
     readAPI info = readAPI(coursecode);
@@ -47,7 +49,7 @@ Course::Course(string coursecode, int year,string term) { //The default construc
     this->prereqs = info.getPrereqs();
 
 }
-*/
+
 
 vector<float> Course::getCEAB() {
     return this->CEAB;
