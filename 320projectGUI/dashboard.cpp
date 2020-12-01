@@ -20,11 +20,8 @@ void DashBoard::on_pushButton_clicked()
 {
     coursewindow1 = new addCourseWindow();
     coursewindow1->show();
-    QObject::connect(coursewindow1, SIGNAL(on_addBtn_Clicked()), this, SLOT(newClassAdded()));
+
 }
 
 
-void DashBoard::newClassAdded(){
 
-   ui->lineEdit->setText("Correct");
-}

@@ -15,8 +15,4 @@ addCourseWindow::~addCourseWindow()
     delete ui;
 }
 
-void addCourseWindow::on_addBtn_clicked()
-{
-    QString newCourse = ui->courseIn->text();
-    //newClassAdded();
-}
+
