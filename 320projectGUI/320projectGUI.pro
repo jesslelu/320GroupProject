@@ -44,6 +44,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    Chemical Engineering.txt \
+    Chemical Engineering.txt \
+    Chemical Engineering.txt \
     Chemical-Engineering.txt \
     Civil-Engineering.txt \
     Computer-Engineering.txt \

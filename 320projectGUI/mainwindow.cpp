@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_learnMore_clicked()
 {
     QMessageBox::information(this, "About this application", "This application was created by Team Hope for their CMPE 320 project "
-                                                             "to help engineering students at Queen's University plan their degree.");
+                                                            "to help engineering students at Queen's University plan their degree.");
 }
 
 void MainWindow::on_startNow_clicked()
