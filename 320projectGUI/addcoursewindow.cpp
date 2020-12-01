@@ -8,6 +8,7 @@ addCourseWindow::addCourseWindow(QWidget *parent) :
     ui(new Ui::addCourseWindow)
 {
     ui->setupUi(this);
+
 }
 
 addCourseWindow::~addCourseWindow()
@@ -16,3 +17,8 @@ addCourseWindow::~addCourseWindow()
 }
 
 
+
+void addCourseWindow::on_addBtn_clicked()
+{
+    QString dis = ui->courseIn->text();
+}
