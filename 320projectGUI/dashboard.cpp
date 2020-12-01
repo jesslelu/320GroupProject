@@ -10,7 +10,7 @@
 #include <QTextStream>
 #include <QMessageBox>
 #include <iostream>
-#include <string>
+
 
 DashBoard::DashBoard(QWidget *parent) :
     QMainWindow(parent),
@@ -145,7 +145,7 @@ void DashBoard::on_pushButton_2_clicked()
     QString EngSciCred = "Engineering Science Credits: " + QString::number(CEAB[3])+ "\n";
     QString engDesCred = "Engineering Design Credits: " + QString::number(CEAB[4])+ "\n";
 
-    QString output = des + cred + pre + dYear + ID + semest + ceab + mathCred + bSciCred + CompStudCred + EngSciCred + engDesCred + "Hit the Yes button on the dashboard to add this course, otherwise hit the no button to continue.";
+    QString output = des + cred + pre + dYear + ID + semest + "\n" + ceab + mathCred + bSciCred + CompStudCred + EngSciCred + engDesCred + "\n" + "Hit the Yes button on the dashboard to add this course, otherwise hit the no button to continue.";
     QMessageBox::information(this, title, output );
 
 }
