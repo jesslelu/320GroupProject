@@ -17,7 +17,8 @@ public:
 
 private slots:
 
-
+public slots:
+    void on_addBtn_clicked();
 
 private:
     Ui::addCourseWindow *ui;
