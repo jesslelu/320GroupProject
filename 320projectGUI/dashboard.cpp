@@ -297,11 +297,56 @@ void DashBoard::on_submitBtn_clicked()
     int year = ui->submitBtn->text().toInt();
     std::string progName = disipline.toLocal8Bit().constData();
     User user1(progName);
-    vector<Course> missingfirstyear = user1.getMissingFirCourse();
-    vector<Course> missingSecyear = user1.getMissingSecCourse();
-    for (int i = 0; i < 6; i++) {
 
+    if(year == 2){
+        vector<Course> missingfirstyear = user1.getMissingFirCourse();
+        for (int i = 0; i < 6; i++) {
             ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
         }
+        for (int i = 6; i < 12; i++) {
+                ui->textBrowser_6->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
+        }
+
+    } if(year == 3){
+        vector<Course> missingfirstyear = user1.getMissingFirCourse();
+        vector<Course> missingSecyear = user1.getMissingSecCourse();
+
+        for (int i = 0; i < 6; i++) {
+            ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 6; i < 12; i++) {
+                ui->textBrowser_6->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 0; i < 6; i++) {
+            ui->textBrowser_8->toPlainText()+ QString::fromStdString(missingSecyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 6; i < 12; i++) {
+                ui->textBrowser_9->toPlainText()+ QString::fromStdString(missingSecyear[i].getCourseID()+ "\n");
+        }
+
+    } if(year == 4){
+        vector<Course> missingfirstyear = user1.getMissingFirCourse();
+        vector<Course> missingSecyear = user1.getMissingSecCourse();
+        vector<Course> missingThirdyear = user1.getMissingSecCourse();
+
+        for (int i = 0; i < 6; i++) {
+            ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 6; i < 12; i++) {
+                ui->textBrowser_6->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 0; i < 6; i++) {
+            ui->textBrowser_8->toPlainText()+ QString::fromStdString(missingSecyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 6; i < 12; i++) {
+                ui->textBrowser_9->toPlainText()+ QString::fromStdString(missingSecyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 0; i < 6; i++) {
+            ui->textBrowser_3->toPlainText()+ QString::fromStdString(missingThirdyear[i].getCourseID()+ "\n");
+        }
+        for (int i = 6; i < 12; i++) {
+            ui->textBrowser_11->toPlainText()+ QString::fromStdString(missingThirdyear[i].getCourseID()+ "\n");
+        }
+    }
 
 }

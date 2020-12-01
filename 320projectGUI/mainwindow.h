@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <screen2.h>
 #include <dashintro.h>
+#include <dashboard.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +26,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Screen2 *screen2;
+    DashBoard *dashboard1;
 
 };
 #endif // MAINWINDOW_H
