@@ -16,6 +16,9 @@ User::User(string progNames){
 	storeRequirements(progNames);
 
 }
+User::User(){
+    progName ="";
+}
 //the one we prob arunt using
 User::User(vector<string> courses, string progNames) :userCourses(courses) {
 

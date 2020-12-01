@@ -23,6 +23,10 @@ private slots:
 
     void on_submitBtn_clicked();
 
+    void on_yesBtn_clicked();
+
+    void on_noBtn_clicked();
+
 private:
 
     Ui::DashBoard *ui;

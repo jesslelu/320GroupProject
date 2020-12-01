@@ -23,6 +23,7 @@ class User {
 public:
 	User(vector<string> courses, string progname);
 	User(string progname);
+    User();
 	vector<Course> getMissing(vector<Course> year);
 	vector<Course> getUserCourses();
 
@@ -60,7 +61,7 @@ public:
 private:
 	vector<string> userCourses;
 	vector<Course> userCoursesObj;
-	string progName;
+    string progName;
 	int requirementSatisfied;//0 if not, 1 if yes
 
 	int numgroupANeeded;
