@@ -2,7 +2,7 @@
 using namespace std;
 
 readAPI::readAPI(string coursecode) {
-	/*
+	
 
 	cpr::Response r = cpr::Get(cpr::Url{ "https://api.qmulus.io/v1/courses/" + coursecode + "?token=eb507c002ce711ebbab92dcdc6160728" });
 	r.header["application/json"];
@@ -24,7 +24,7 @@ readAPI::readAPI(string coursecode) {
 
 
 	//cout << j[""]
-	 * */
+	 
 
 
 }

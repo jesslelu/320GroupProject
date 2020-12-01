@@ -66,9 +66,9 @@ string Course::getCourseID(){
 string Course::getDescription() {
     return this->description;
 }
-//char Course::getTerm() {
-  //  return this->term;
-//}
+string Course::getTerm() {
+    return this->term;
+}
 string Course::getPrereqs() {
     return this->prereqs;
 }

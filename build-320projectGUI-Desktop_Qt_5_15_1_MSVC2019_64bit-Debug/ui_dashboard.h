@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -29,21 +30,34 @@ class Ui_DashBoard
 {
 public:
     QWidget *centralwidget;
+    QLabel *label_2;
     QTextEdit *textEdit;
+    QTextBrowser *textBrowser_5;
+    QLabel *label_5;
     QTextBrowser *textBrowser_10;
+    QTextBrowser *textBrowser_16;
+    QTextBrowser *textBrowser_6;
+    QTextBrowser *textBrowser_9;
+    QTextBrowser *textBrowser_14;
+    QLineEdit *lineEdit_2;
+    QTextBrowser *textBrowser_13;
+    QTextBrowser *textBrowser;
+    QTextBrowser *textBrowser_15;
+    QTextBrowser *textBrowser_3;
+    QTextBrowser *textBrowser_8;
+    QTextBrowser *textBrowser_7;
+    QLineEdit *lineEdit_3;
+    QTextBrowser *textBrowser_4;
+    QPushButton *pushButton_2;
     QTextBrowser *textBrowser_11;
     QTableWidget *tableWidget;
-    QTextBrowser *textBrowser;
-    QTextBrowser *textBrowser_8;
-    QTextBrowser *textBrowser_3;
+    QLabel *label_4;
     QTextBrowser *textBrowser_12;
-    QTextBrowser *textBrowser_9;
+    QLineEdit *lineEdit_4;
     QLabel *label;
-    QTextBrowser *textBrowser_6;
-    QLabel *label_2;
-    QPushButton *pushButton;
     QLineEdit *lineEdit;
-    QTextBrowser *textBrowser_7;
+    QLabel *label_3;
+    QComboBox *comboBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -54,13 +68,20 @@ public:
         DashBoard->resize(1302, 723);
         centralwidget = new QWidget(DashBoard);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(50, 210, 781, 311));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(640, 60, 141, 51));
         QFont font;
         font.setFamily(QString::fromUtf8("Roboto"));
-        font.setPointSize(9);
-        textEdit->setFont(font);
+        font.setPointSize(14);
+        label_2->setFont(font);
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setGeometry(QRect(20, 180, 761, 381));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Roboto"));
+        font1.setPointSize(9);
+        textEdit->setFont(font1);
         textEdit->setStyleSheet(QString::fromUtf8(" QTextEdit {\n"
 "     border: 2px solid gray;\n"
 "     border-radius: 20px;\n"
@@ -71,15 +92,106 @@ public:
 "	color: rgb(56, 136, 255);\n"
 "\n"
 " }"));
+        textBrowser_5 = new QTextBrowser(centralwidget);
+        textBrowser_5->setObjectName(QString::fromUtf8("textBrowser_5"));
+        textBrowser_5->setGeometry(QRect(540, 340, 101, 81));
+        textBrowser_5->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
+        textBrowser_5->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(370, 580, 171, 31));
+        QFont font2;
+        font2.setPointSize(12);
+        label_5->setFont(font2);
         textBrowser_10 = new QTextBrowser(centralwidget);
         textBrowser_10->setObjectName(QString::fromUtf8("textBrowser_10"));
-        textBrowser_10->setGeometry(QRect(320, 460, 71, 41));
-        textBrowser_10->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
+        textBrowser_10->setGeometry(QRect(290, 450, 71, 41));
+        textBrowser_10->setStyleSheet(QString::fromUtf8("\n"
 "border: 0px solid lightblue;"));
         textBrowser_10->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_16 = new QTextBrowser(centralwidget);
+        textBrowser_16->setObjectName(QString::fromUtf8("textBrowser_16"));
+        textBrowser_16->setGeometry(QRect(640, 450, 71, 41));
+        textBrowser_16->setStyleSheet(QString::fromUtf8("\n"
+"border: 0px solid lightblue;"));
+        textBrowser_16->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_6 = new QTextBrowser(centralwidget);
+        textBrowser_6->setObjectName(QString::fromUtf8("textBrowser_6"));
+        textBrowser_6->setGeometry(QRect(170, 340, 101, 81));
+        textBrowser_6->setStyleSheet(QString::fromUtf8("\n"
+"\n"
+"\n"
+"border: 0px solid lightblue;"));
+        textBrowser_6->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_9 = new QTextBrowser(centralwidget);
+        textBrowser_9->setObjectName(QString::fromUtf8("textBrowser_9"));
+        textBrowser_9->setGeometry(QRect(290, 340, 101, 81));
+        textBrowser_9->setStyleSheet(QString::fromUtf8("\n"
+"border: 0px solid lightblue;"));
+        textBrowser_9->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_14 = new QTextBrowser(centralwidget);
+        textBrowser_14->setObjectName(QString::fromUtf8("textBrowser_14"));
+        textBrowser_14->setGeometry(QRect(660, 250, 101, 81));
+        textBrowser_14->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
+        textBrowser_14->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        lineEdit_2 = new QLineEdit(centralwidget);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(220, 620, 121, 51));
+        textBrowser_13 = new QTextBrowser(centralwidget);
+        textBrowser_13->setObjectName(QString::fromUtf8("textBrowser_13"));
+        textBrowser_13->setGeometry(QRect(540, 450, 71, 41));
+        textBrowser_13->setStyleSheet(QString::fromUtf8("\n"
+"border: 0px solid lightblue;"));
+        textBrowser_13->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser = new QTextBrowser(centralwidget);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        textBrowser->setGeometry(QRect(170, 250, 101, 81));
+        textBrowser->setStyleSheet(QString::fromUtf8("\n"
+"border: 0px solid lightblue;\n"
+""));
+        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_15 = new QTextBrowser(centralwidget);
+        textBrowser_15->setObjectName(QString::fromUtf8("textBrowser_15"));
+        textBrowser_15->setGeometry(QRect(650, 340, 101, 81));
+        textBrowser_15->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
+        textBrowser_15->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_3 = new QTextBrowser(centralwidget);
+        textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
+        textBrowser_3->setGeometry(QRect(410, 250, 101, 81));
+        textBrowser_3->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
+        textBrowser_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_8 = new QTextBrowser(centralwidget);
+        textBrowser_8->setObjectName(QString::fromUtf8("textBrowser_8"));
+        textBrowser_8->setGeometry(QRect(290, 250, 101, 81));
+        textBrowser_8->setStyleSheet(QString::fromUtf8("\n"
+"border: 0px solid lightblue;"));
+        textBrowser_8->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        textBrowser_7 = new QTextBrowser(centralwidget);
+        textBrowser_7->setObjectName(QString::fromUtf8("textBrowser_7"));
+        textBrowser_7->setGeometry(QRect(170, 450, 71, 41));
+        textBrowser_7->setStyleSheet(QString::fromUtf8("\n"
+"border: 0px solid lightblue;"));
+        textBrowser_7->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        lineEdit_3 = new QLineEdit(centralwidget);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(40, 620, 151, 51));
+        textBrowser_4 = new QTextBrowser(centralwidget);
+        textBrowser_4->setObjectName(QString::fromUtf8("textBrowser_4"));
+        textBrowser_4->setGeometry(QRect(540, 250, 101, 81));
+        textBrowser_4->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
+        textBrowser_4->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(550, 610, 131, 61));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Roboto"));
+        font3.setPointSize(12);
+        pushButton_2->setFont(font3);
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(10, 200, 40);\n"
+"  border-radius: 10px;"));
         textBrowser_11 = new QTextBrowser(centralwidget);
         textBrowser_11->setObjectName(QString::fromUtf8("textBrowser_11"));
-        textBrowser_11->setGeometry(QRect(440, 350, 101, 81));
+        textBrowser_11->setGeometry(QRect(410, 340, 101, 81));
         textBrowser_11->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
         textBrowser_11->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         tableWidget = new QTableWidget(centralwidget);
@@ -131,78 +243,35 @@ public:
         __qtablewidgetitem19->setBackground(brush);
         tableWidget->setItem(6, 0, __qtablewidgetitem19);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(860, 200, 421, 351));
+        tableWidget->setGeometry(QRect(790, 180, 501, 381));
         tableWidget->setStyleSheet(QString::fromUtf8(""));
-        textBrowser = new QTextBrowser(centralwidget);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(200, 260, 101, 81));
-        textBrowser->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
-"border: 0px solid lightblue;\n"
-""));
-        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_8 = new QTextBrowser(centralwidget);
-        textBrowser_8->setObjectName(QString::fromUtf8("textBrowser_8"));
-        textBrowser_8->setGeometry(QRect(320, 260, 101, 81));
-        textBrowser_8->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
-"\n"
-"border: 0px solid lightblue;"));
-        textBrowser_8->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_3 = new QTextBrowser(centralwidget);
-        textBrowser_3->setObjectName(QString::fromUtf8("textBrowser_3"));
-        textBrowser_3->setGeometry(QRect(440, 260, 101, 81));
-        textBrowser_3->setStyleSheet(QString::fromUtf8("border: 0px solid lightblue;"));
-        textBrowser_3->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(200, 580, 151, 31));
+        label_4->setFont(font2);
         textBrowser_12 = new QTextBrowser(centralwidget);
         textBrowser_12->setObjectName(QString::fromUtf8("textBrowser_12"));
-        textBrowser_12->setGeometry(QRect(440, 460, 71, 41));
+        textBrowser_12->setGeometry(QRect(410, 450, 71, 41));
         textBrowser_12->setStyleSheet(QString::fromUtf8("\n"
 "border: 0px solid lightblue;"));
         textBrowser_12->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        textBrowser_9 = new QTextBrowser(centralwidget);
-        textBrowser_9->setObjectName(QString::fromUtf8("textBrowser_9"));
-        textBrowser_9->setGeometry(QRect(320, 350, 101, 81));
-        textBrowser_9->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
-"\n"
-"border: 0px solid lightblue;"));
-        textBrowser_9->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        lineEdit_4 = new QLineEdit(centralwidget);
+        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(370, 620, 141, 51));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(50, 50, 201, 71));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("Roboto"));
-        font1.setPointSize(16);
-        label->setFont(font1);
-        textBrowser_6 = new QTextBrowser(centralwidget);
-        textBrowser_6->setObjectName(QString::fromUtf8("textBrowser_6"));
-        textBrowser_6->setGeometry(QRect(200, 350, 101, 81));
-        textBrowser_6->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
-"\n"
-"\n"
-"border: 0px solid lightblue;"));
-        textBrowser_6->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(670, 70, 141, 51));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Roboto"));
-        font2.setPointSize(14);
-        label_2->setFont(font2);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(730, 580, 131, 61));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("Roboto"));
-        font3.setPointSize(12);
-        pushButton->setFont(font3);
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(10, 30, 240);\n"
-"  border-radius: 10px;"));
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(50, 120, 261, 61));
+        label->setGeometry(QRect(20, 40, 201, 71));
         QFont font4;
         font4.setFamily(QString::fromUtf8("Roboto"));
-        font4.setPointSize(10);
-        lineEdit->setFont(font4);
+        font4.setPointSize(16);
+        label->setFont(font4);
+        lineEdit = new QLineEdit(centralwidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(20, 110, 131, 61));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("MS Shell Dlg 2"));
+        font5.setPointSize(18);
+        lineEdit->setFont(font5);
         lineEdit->setStyleSheet(QString::fromUtf8(" QLineEdit {\n"
 "     border: 2px solid lightblue;\n"
 "     border-radius: 20px;\n"
@@ -211,17 +280,17 @@ public:
 "     selection-background-color: darkgray;\n"
 " }"));
         lineEdit->setReadOnly(true);
-        textBrowser_7 = new QTextBrowser(centralwidget);
-        textBrowser_7->setObjectName(QString::fromUtf8("textBrowser_7"));
-        textBrowser_7->setGeometry(QRect(200, 460, 71, 41));
-        textBrowser_7->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
-"\n"
-"border: 0px solid lightblue;"));
-        textBrowser_7->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(60, 580, 121, 31));
+        label_3->setFont(font2);
+        comboBox = new QComboBox(centralwidget);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(180, 120, 201, 41));
         DashBoard->setCentralWidget(centralwidget);
         menubar = new QMenuBar(DashBoard);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1302, 26));
+        menubar->setGeometry(QRect(0, 0, 1302, 21));
         DashBoard->setMenuBar(menubar);
         statusbar = new QStatusBar(DashBoard);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -235,41 +304,104 @@ public:
     void retranslateUi(QMainWindow *DashBoard)
     {
         DashBoard->setWindowTitle(QCoreApplication::translate("DashBoard", "MainWindow", nullptr));
+        label_2->setText(QString());
         textEdit->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Roboto'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">	            1st Year         2nd Year         3rd Year         4th Year         5th year		Fall	</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">	            1st Year             2nd Year           3rd Year            4th Year             5th year	</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Fall	</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:"
+                        "11pt;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;"
-                        "\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Winter</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-s"
-                        "ize:11pt;\"><br /></p>\n"
+"<p style=\" m"
+                        "argin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Winter</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
+"<p s"
+                        "tyle=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:11pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2'; font-size:11pt;\">Spring/Summer</span></p></body></html>", nullptr));
+        textBrowser_5->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">,</span></p></body></html>", nullptr));
+        label_5->setText(QCoreApplication::translate("DashBoard", "Semester (F/W/S)", nullptr));
         textBrowser_10->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">A</span></p></body></html>", nullptr));
+        textBrowser_16->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">,</span></p></body></html>", nullptr));
+        textBrowser_6->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">A</span></p></body></html>", nullptr));
+        textBrowser_9->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">A</span></p></body></html>", nullptr));
+        textBrowser_14->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">,</span></p></body></html>", nullptr));
+        lineEdit_2->setText(QCoreApplication::translate("DashBoard", "1", nullptr));
+        textBrowser_13->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">,</span></p></body></html>", nullptr));
+        textBrowser->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">A</span></p></body></html>", nullptr));
+        textBrowser_15->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">,</span></p></body></html>", nullptr));
+        textBrowser_3->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">.</span></p></body></html>", nullptr));
+        textBrowser_8->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">A</span></p></body></html>", nullptr));
+        textBrowser_7->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">A</span></p></body></html>", nullptr));
+        lineEdit_3->setText(QCoreApplication::translate("DashBoard", "asd", nullptr));
+        textBrowser_4->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">,</span></p></body></html>", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("DashBoard", "Add Course", nullptr));
         textBrowser_11->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\""
-                        ">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7pt;\"><br /></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">,</span></p></body></html>", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("DashBoard", "Credit", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -315,77 +447,15 @@ public:
         ___qtablewidgetitem19->setText(QCoreApplication::translate("DashBoard", "-300", nullptr));
         tableWidget->setSortingEnabled(__sortingEnabled);
 
-        textBrowser->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\""
-                        ">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7pt;\"><br /></p></body></html>", nullptr));
-        textBrowser_8->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\""
-                        ">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p></body></html>", nullptr));
-        textBrowser_3->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\""
-                        ">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7pt;\"><br /></p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("DashBoard", "Year (1/2/3/4/5)", nullptr));
         textBrowser_12->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 300</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        textBrowser_9->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\""
-                        ">CMPE 200</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 200</span></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">,</span></p></body></html>", nullptr));
         label->setText(QCoreApplication::translate("DashBoard", "Your Dashboard", nullptr));
-        textBrowser_6->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\""
-                        ">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7pt;\"><br /></p></body></html>", nullptr));
-        label_2->setText(QCoreApplication::translate("DashBoard", "Plan 1", nullptr));
-        pushButton->setText(QCoreApplication::translate("DashBoard", "Plan Degree", nullptr));
-        lineEdit->setText(QCoreApplication::translate("DashBoard", "Degree : Computer Engineering", nullptr));
-        textBrowser_7->setHtml(QCoreApplication::translate("DashBoard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7pt;\">CMPE 100</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        lineEdit->setText(QCoreApplication::translate("DashBoard", "Degree : ", nullptr));
+        label_3->setText(QCoreApplication::translate("DashBoard", "Course Code", nullptr));
     } // retranslateUi
 
 };

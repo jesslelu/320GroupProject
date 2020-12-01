@@ -27,12 +27,10 @@ public:
 	string getPrereqs();
 	int getDesiredYear();
 	string getCourseID();
-
+	string getTerm();
 
 
 private:
-	bool ListACheck();
-	bool ListBCheck();
 	string name;
 	string description;
 	float credits;
@@ -40,5 +38,6 @@ private:
 	string prereqs;
 	int desiredYear;
 	string CourseID;
+	string term;
 
 };

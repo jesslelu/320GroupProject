@@ -130,14 +130,21 @@
     </ResourceCompile>
   <QtUic><ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription><QtUicDir>$(ProjectDir)</QtUicDir><QtUicFileName>ui_%(Filename).h</QtUicFileName></QtUic><QtMoc><CompilerFlavor>msvc</CompilerFlavor><Include>./$(Configuration)/moc_predefs.h</Include><ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription><DynamicSource>output</DynamicSource><QtMocDir>$(Configuration)</QtMocDir><QtMocFileName>moc_%(Filename).cpp</QtMocFileName></QtMoc></ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Course.cpp" />
+    <ClCompile Include="Requirement.cpp" />
+    <ClCompile Include="User.cpp" />
     <ClCompile Include="addcoursewindow.cpp" />
     <ClCompile Include="dashboard.cpp" />
     <ClCompile Include="dashintro.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="readAPI.cpp" />
     <ClCompile Include="screen2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Course.h" />
+    <ClInclude Include="Requirement.h" />
+    <ClInclude Include="User.h" />
     <QtMoc Include="addcoursewindow.h">
       
       
@@ -178,6 +185,7 @@
       
       
     </QtMoc>
+    <ClInclude Include="readAPI.h" />
     <QtMoc Include="screen2.h">
       
       
@@ -278,6 +286,19 @@
       
       
     </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chemical-Engineering.txt" />
+    <None Include="Chemical" />
+    <None Include="Civil-Engineering.txt" />
+    <None Include="Computer-Engineering.txt" />
+    <None Include="Electrical-Engineering.txt" />
+    <None Include="Engineering-Chemistry.txt" />
+    <None Include="Engineering-Physics.txt" />
+    <None Include="Engineering.txt" />
+    <None Include="Geological-Engineering.txt" />
+    <None Include="Mathematics-Engineering.txt" />
+    <None Include="Mechanical-Engineering.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" /><ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')"><Import Project="$(QtMsBuild)\qt.targets" /></ImportGroup>
   <ImportGroup Label="ExtensionTargets" />

@@ -1,2 +1,5 @@
 C:\Users\Kyle\Documents\hope\320projectGUI\debug\320projectGUI.exe
 C:\Users\Kyle\Documents\hope\320projectGUI\debug\320projectGUI.pdb
+C:\Users\Kyle\Documents\hope\320projectGUI\debug\320projectGUI.vcxproj.CopyComplete
+C:\Users\Kyle\Documents\hope\320projectGUI\debug\libcurl-d.dll
+C:\Users\Kyle\Documents\hope\320projectGUI\debug\zlibd1.dll

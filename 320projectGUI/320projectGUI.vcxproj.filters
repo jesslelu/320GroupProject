@@ -35,8 +35,27 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Course.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Requirement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="addcoursewindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,11 +71,23 @@
     <ClCompile Include="mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="readAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="screen2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Course.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Requirement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <QtMoc Include="addcoursewindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -69,6 +100,9 @@
     <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <ClInclude Include="readAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <QtMoc Include="screen2.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -112,5 +146,40 @@
     <QtUic Include="screen2.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chemical-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Chemical">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Civil-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Computer-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Electrical-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Engineering-Chemistry.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Engineering-Physics.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Geological-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Mathematics-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="Mechanical-Engineering.txt">
+      <Filter>Distribution Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

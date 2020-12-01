@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_DashBoard_t {
     QByteArrayData data[3];
-    char stringdata0[33];
+    char stringdata0[35];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,11 @@ struct qt_meta_stringdata_DashBoard_t {
 static const qt_meta_stringdata_DashBoard_t qt_meta_stringdata_DashBoard = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "DashBoard"
-QT_MOC_LITERAL(1, 10, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(2, 32, 0) // ""
+QT_MOC_LITERAL(1, 10, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(2, 34, 0) // ""
 
     },
-    "DashBoard\0on_pushButton_clicked\0"
+    "DashBoard\0on_pushButton_2_clicked\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -69,7 +69,7 @@ void DashBoard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         auto *_t = static_cast<DashBoard *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
+        case 0: _t->on_pushButton_2_clicked(); break;
         default: ;
         }
     }

@@ -2,10 +2,10 @@
 #include <string>
 #include <iostream>
 #include <vector>
-//#include <nlohmann/json.hpp>
-//#include <cpr/cpr.h>
+#include <nlohmann/json.hpp>
+#include <cpr/cpr.h>
 using namespace std;
-//using json = nlohmann::json;
+using json = nlohmann::json;
 
 
 class readAPI
@@ -21,7 +21,7 @@ public:
 
 
 private:
-//    json j;
+    json j;
     std::string description;
     std::string name;
     float credits;

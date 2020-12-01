@@ -34,6 +34,9 @@
     </property>
    </widget>
    <widget class="QTextEdit" name="textEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -486,10 +489,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>190</y>
-      <width>421</width>
-      <height>351</height>
+      <x>790</x>
+      <y>180</y>
+      <width>501</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -681,14 +684,14 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>20</x>
       <y>110</y>
-      <width>261</width>
+      <width>131</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Roboto</family>
-      <pointsize>10</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>18</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -701,7 +704,7 @@ p, li { white-space: pre-wrap; }
  }</string>
     </property>
     <property name="text">
-     <string>Degree : Computer Engineering</string>
+     <string>Degree : </string>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -723,6 +726,16 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>Course Code</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
     </property>
    </widget>
   </widget>
