@@ -26,6 +26,34 @@ DashBoard::DashBoard(QWidget *parent) :
     ui->comboBox->addItem("Chemical-Engineering");
     ui->comboBox->addItem("Engineering-Chemistry");
     ui->comboBox->addItem("Civil-Engineering");
+
+    ui->textEdit->setVisible(false);
+    ui->label_2->setVisible(false);
+    ui->label_3->setVisible(false);
+    ui->label_4->setVisible(false);
+    ui->label_5->setVisible(false);
+    ui->lineEdit_2->setVisible(false);
+    ui->lineEdit_3->setVisible(false);
+    ui->lineEdit_4->setVisible(false);
+    ui->tableWidget->setVisible(false);
+    ui->textBrowser->setVisible(false);
+    ui->textBrowser_10->setVisible(false);
+    ui->textBrowser_11->setVisible(false);
+    ui->textBrowser_12->setVisible(false);
+    ui->textBrowser_13->setVisible(false);
+    ui->textBrowser_14->setVisible(false);
+    ui->textBrowser_15->setVisible(false);
+    ui->textBrowser_16->setVisible(false);
+    ui->textBrowser_3->setVisible(false);
+    ui->textBrowser_4->setVisible(false);
+    ui->textBrowser_5->setVisible(false);
+    ui->textBrowser_6->setVisible(false);
+    ui->textBrowser_7->setVisible(false);
+    ui->textBrowser_8->setVisible(false);
+    ui->textBrowser_9->setVisible(false);
+    ui->pushButton_2->setVisible(false);
+
+
     string name;
     vector<string> courses;
 }
@@ -44,12 +72,14 @@ void DashBoard::on_pushButton_2_clicked()
     QString course = ui->lineEdit_3->text();
     QString disipline = ui->comboBox->currentText();
 
-    //std::string progName = disipline.toLocal8Bit().constData();
+    std::string progName = disipline.toLocal8Bit().constData();
     std::string courseName = course.toLocal8Bit().constData();
     std::string sem = semester.toLocal8Bit().constData();
 
-    string progName = "Civil-Engineering";
-    User user(progName);
+
+
+    //string progName = "Civil-Engineering";
+    //User user(progName);
 
     //vector<Course>userCourseList = user.getUserCourses();
 
@@ -74,7 +104,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser->setText(ui->textBrowser->toPlainText() + courseName);
         }
@@ -85,7 +115,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_6->setText(ui->textBrowser_6->toPlainText() + courseName);
         }
@@ -96,7 +126,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_7->setText(ui->textBrowser_7->toPlainText() + courseName);
         }
@@ -107,7 +137,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_8->setText(ui->textBrowser_8->toPlainText() + courseName);
         }
@@ -118,7 +148,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_9->setText(ui->textBrowser_9->toPlainText() + courseName);
         }
@@ -128,7 +158,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_10->setText(ui->textBrowser_10->toPlainText() + courseName);
         }
@@ -139,7 +169,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_3->setText(ui->textBrowser_3->toPlainText() + courseName);
         }
@@ -150,7 +180,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_11->setText(ui->textBrowser_11->toPlainText() + courseName);
         }
@@ -161,7 +191,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_12->setText(ui->textBrowser_12->toPlainText() + courseName);
         }
@@ -172,7 +202,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_4->setText(ui->textBrowser_4->toPlainText() + courseName);
         }
@@ -183,7 +213,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_5->setText(ui->textBrowser_5->toPlainText() + courseName);
         }
@@ -194,7 +224,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_13->setText(ui->textBrowser_13->toPlainText() + courseName);
         }
@@ -204,7 +234,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_14->setText(ui->textBrowser_14->toPlainText() + courseName);
         }
@@ -215,7 +245,7 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_15->setText(ui->textBrowser_15->toPlainText() + courseName);
         }
@@ -226,11 +256,51 @@ void DashBoard::on_pushButton_2_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user.addCourse(courseName, year, sem);
+            //user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_16->setText(ui->textBrowser_16->toPlainText() + courseName);
         }
     }
        //errorBox.setText("Please enter a value for the first numerator");
        //errorBox.exec();
+}
+
+void DashBoard::on_submitBtn_clicked()
+{
+    ui->textEdit->setVisible(true);
+    ui->label_2->setVisible(true);
+    ui->label_3->setVisible(true);
+    ui->label_4->setVisible(true);
+    ui->label_5->setVisible(true);
+    ui->lineEdit_2->setVisible(true);
+    ui->lineEdit_3->setVisible(true);
+    ui->lineEdit_4->setVisible(true);
+    ui->tableWidget->setVisible(true);
+    ui->textBrowser->setVisible(true);
+    ui->textBrowser_10->setVisible(true);
+    ui->textBrowser_11->setVisible(true);
+    ui->textBrowser_12->setVisible(true);
+    ui->textBrowser_13->setVisible(true);
+    ui->textBrowser_14->setVisible(true);
+    ui->textBrowser_15->setVisible(true);
+    ui->textBrowser_16->setVisible(true);
+    ui->textBrowser_3->setVisible(true);
+    ui->textBrowser_4->setVisible(true);
+    ui->textBrowser_5->setVisible(true);
+    ui->textBrowser_6->setVisible(true);
+    ui->textBrowser_7->setVisible(true);
+    ui->textBrowser_8->setVisible(true);
+    ui->textBrowser_9->setVisible(true);
+    ui->pushButton_2->setVisible(true);
+    QString disipline = ui->comboBox->currentText();
+    int year = ui->submitBtn->text().toInt();
+    std::string progName = disipline.toLocal8Bit().constData();
+    User user1(progName);
+    vector<Course> missingfirstyear = user1.getMissingFirCourse();
+    vector<Course> missingSecyear = user1.getMissingSecCourse();
+    for (int i = 0; i < 6; i++) {
+
+            ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID());
+        }
+
 }
