@@ -292,6 +292,7 @@ void DashBoard::on_submitBtn_clicked()
     ui->textBrowser_8->setVisible(true);
     ui->textBrowser_9->setVisible(true);
     ui->pushButton_2->setVisible(true);
+
     QString disipline = ui->comboBox->currentText();
     int year = ui->submitBtn->text().toInt();
     std::string progName = disipline.toLocal8Bit().constData();
@@ -300,7 +301,7 @@ void DashBoard::on_submitBtn_clicked()
     vector<Course> missingSecyear = user1.getMissingSecCourse();
     for (int i = 0; i < 6; i++) {
 
-            ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID());
+            ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n");
         }
 
 }
