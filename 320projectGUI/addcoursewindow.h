@@ -15,6 +15,9 @@ public:
     explicit addCourseWindow(QWidget *parent = nullptr);
     ~addCourseWindow();
 
+private slots:
+    void on_addBtn_clicked();
+
 private:
     Ui::addCourseWindow *ui;
 };

@@ -1,46 +1,44 @@
-/*
- * Course.h
- *
- *  Created on: Nov. 12, 2020
- *      Author: jessielu
- */
 
-#ifndef COURSE_H_
-#define COURSE_H_
-#include <string>
+#pragma once
 #include <vector>
-#include <iostream>
-#include <cstring>
+#include <string>
+#include "readAPI.h"
 using namespace std;
+
+
+class CourseException { //the exception class to handle errors when the denominator is set to 0
+public:
+	CourseException(const string& message);
+	string& what();
+private:
+	string message;
+
+};
 
 class Course {
 public:
-	Course(const string& courseID);
-	string getCourseID();
+
+	Course(string coursecode, int year,string term);
+	Course(string coursecode);
 	string getName();
-	char getTerm();
 	string getDescription();
 	float getCredits();
-	float getCEAB();
-	vector <string> getPrereqs();
-	bool getListA();
-	bool getListB();
+	vector<float> getCEAB();
+	string getPrereqs();
 	int getDesiredYear();
+	string getCourseID();
+
+
+
 private:
-	string courseID;
 	bool ListACheck();
 	bool ListBCheck();
 	string name;
 	string description;
 	float credits;
-	float CEAB;
-	vector <string> prereqs;
-	bool listA;
-	bool listB;
-	char term;
+	vector<float> CEAB;
+	string prereqs;
 	int desiredYear;
-	string code;
+	string CourseID;
+
 };
-
-
-#endif /* COURSE_H_ */
