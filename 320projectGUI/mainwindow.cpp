@@ -5,6 +5,7 @@
 #include<QMessageBox>
 #include<string>
 #include<QShortcut>
+#include <dashboard.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,9 +29,12 @@ void MainWindow::on_learnMore_clicked()
 
 void MainWindow::on_startNow_clicked()
 {
-    screen2 = new Screen2();
-    screen2->show();
+    //screen2 = new Screen2();
+    //screen2->show();
+
+    //this->hide();
+    dashboard1 = new DashBoard();
+    dashboard1->show();
 
     this->hide();
-
 }
