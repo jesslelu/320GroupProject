@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../CMPE320ProjectGUINewBuild/dashboard.h"
+#include "../../GUIBuild3/dashboard.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -21,33 +21,33 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_dashboard_t {
+struct qt_meta_stringdata_DashBoard_t {
     QByteArrayData data[7];
     char stringdata0[113];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_dashboard_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_DashBoard_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_dashboard_t qt_meta_stringdata_dashboard = {
+static const qt_meta_stringdata_DashBoard_t qt_meta_stringdata_DashBoard = {
     {
-QT_MOC_LITERAL(0, 0, 9), // "dashboard"
-QT_MOC_LITERAL(1, 10, 23), // "on_pushButton_2_clicked"
-QT_MOC_LITERAL(2, 34, 0), // ""
-QT_MOC_LITERAL(3, 35, 20), // "on_submitBtn_clicked"
+QT_MOC_LITERAL(0, 0, 9), // "DashBoard"
+QT_MOC_LITERAL(1, 10, 20), // "on_submitBtn_clicked"
+QT_MOC_LITERAL(2, 31, 0), // ""
+QT_MOC_LITERAL(3, 32, 23), // "on_pushButton_2_clicked"
 QT_MOC_LITERAL(4, 56, 17), // "on_yesBtn_clicked"
 QT_MOC_LITERAL(5, 74, 16), // "on_noBtn_clicked"
 QT_MOC_LITERAL(6, 91, 21) // "on_missingBtn_clicked"
 
     },
-    "dashboard\0on_pushButton_2_clicked\0\0"
-    "on_submitBtn_clicked\0on_yesBtn_clicked\0"
+    "DashBoard\0on_submitBtn_clicked\0\0"
+    "on_pushButton_2_clicked\0on_yesBtn_clicked\0"
     "on_noBtn_clicked\0on_missingBtn_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_dashboard[] = {
+static const uint qt_meta_data_DashBoard[] = {
 
  // content:
        8,       // revision
@@ -77,14 +77,14 @@ static const uint qt_meta_data_dashboard[] = {
        0        // eod
 };
 
-void dashboard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void DashBoard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<dashboard *>(_o);
+        auto *_t = static_cast<DashBoard *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_2_clicked(); break;
-        case 1: _t->on_submitBtn_clicked(); break;
+        case 0: _t->on_submitBtn_clicked(); break;
+        case 1: _t->on_pushButton_2_clicked(); break;
         case 2: _t->on_yesBtn_clicked(); break;
         case 3: _t->on_noBtn_clicked(); break;
         case 4: _t->on_missingBtn_clicked(); break;
@@ -94,30 +94,30 @@ void dashboard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject dashboard::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject DashBoard::staticMetaObject = { {
     QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
-    qt_meta_stringdata_dashboard.data,
-    qt_meta_data_dashboard,
+    qt_meta_stringdata_DashBoard.data,
+    qt_meta_data_DashBoard,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *dashboard::metaObject() const
+const QMetaObject *DashBoard::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *dashboard::qt_metacast(const char *_clname)
+void *DashBoard::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_dashboard.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_DashBoard.stringdata0))
         return static_cast<void*>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 
-int dashboard::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int DashBoard::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
