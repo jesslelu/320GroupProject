@@ -486,128 +486,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>180</y>
-      <width>501</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <row>
-     <property name="text">
-      <string>1st Year</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>2nd Year</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>3rd Year</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>Complementary</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>New Row</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>Total planned+taken</string>
-     </property>
-    </row>
-    <row>
-     <property name="text">
-      <string>Difference</string>
-     </property>
-    </row>
-    <column>
-     <property name="text">
-      <string>Credit</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>AU</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Math+NS</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Math</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>NS</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>CS</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ES</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ED</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>ES+ED</string>
-     </property>
-    </column>
-    <item row="0" column="0">
-     <property name="text">
-      <string>39.6</string>
-     </property>
-    </item>
-    <item row="0" column="1">
-     <property name="text">
-      <string>400</string>
-     </property>
-    </item>
-    <item row="0" column="2">
-     <property name="text">
-      <string>263</string>
-     </property>
-    </item>
-    <item row="6" column="0">
-     <property name="text">
-      <string>-300</string>
-     </property>
-     <property name="background">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>254</red>
-        <green>0</green>
-        <blue>0</blue>
-       </color>
-      </brush>
-     </property>
-    </item>
-   </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
@@ -792,7 +670,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="submitBtn">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>810</x>
       <y>130</y>
       <width>231</width>
       <height>31</height>
@@ -812,7 +690,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="yesBtn">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>770</x>
       <y>630</y>
       <width>75</width>
       <height>23</height>
@@ -832,7 +710,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="noBtn">
     <property name="geometry">
      <rect>
-      <x>1010</x>
+      <x>880</x>
       <y>630</y>
       <width>75</width>
       <height>23</height>
@@ -852,7 +730,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="addCourseLabel">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>780</x>
       <y>590</y>
       <width>131</width>
       <height>21</height>
@@ -867,6 +745,26 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>Add Course?</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="missingBtn">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>220</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Calculate Missing Requirements</string>
     </property>
    </widget>
   </widget>

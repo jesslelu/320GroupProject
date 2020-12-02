@@ -31,11 +31,13 @@ private slots:
 
     void on_noBtn_clicked();
 
+    void on_missingBtn_clicked();
+    
 private:
 
     Ui::DashBoard *ui;
     addCourseWindow *coursewindow1;
-    User user1();
+    User user1;
 };
 
 #endif // DASHBOARD_H

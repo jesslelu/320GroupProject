@@ -76,7 +76,7 @@ DashBoard::DashBoard(QWidget *parent) :
     ui->textEdit->setReadOnly(true);
 
     //vector<string> courses;
-    //User user1();
+
 }
 
 DashBoard::~DashBoard()
@@ -112,7 +112,7 @@ void DashBoard::on_pushButton_2_clicked()
        errorBox.exec();
        errors = true;
     }
-    User user(progName);
+    //User user(progName);
 
     Course newCourse(courseName);
 
@@ -182,7 +182,7 @@ void DashBoard::on_submitBtn_clicked()
     int year = ui->yearIn->text().toInt();
     std::string progName = disipline.toLocal8Bit().constData();
 
-    User user1(progName);
+    user1 = User(progName);
     
 
     if(year == 1){
@@ -315,7 +315,9 @@ void DashBoard::on_yesBtn_clicked()
     std::string progName = disipline.toLocal8Bit().constData();
     std::string courseName = course.toLocal8Bit().constData();
     std::string sem = semester.toLocal8Bit().constData();
-    User user1(progName);
+    //user1 = User(progName);
+
+
     if(year != 1 && year != 2  && year != 3  && year != 4  && year != 5)
     {
         errorBox.setText("Please enter a valid year");
@@ -508,4 +510,72 @@ void DashBoard::on_noBtn_clicked()
     ui->lineEdit_2->setText("");
     ui->lineEdit_4->setText("");
     ui->lineEdit_3->setText("");
+}
+
+
+void DashBoard::on_missingBtn_clicked()
+{
+    QMessageBox missingCoursesBox;
+
+    vector<Course> missingFirstYear = user1.getMissingFirCourse();
+    vector<Course> missingSecYear = user1.getMissingSecCourse();
+    vector<Course> missingThirYear = user1.getMissingThirCourse();
+    vector<Course> missingFourthYear = user1.getMissingFourCourse();
+
+    int l1 = missingFirstYear.size();
+    int l2 = missingSecYear.size();
+    int l3 = missingThirYear.size();
+    int l4 = missingFourthYear.size();
+
+    int totalMissingCore = l1+l2+l3+l4;
+
+    QString missingInfo = "Here are the" + QString::number(totalMissingCore)+ " courses you're missing:\n";
+
+    if (l1 > 0){
+        missingInfo + "First year courses:\n";
+        for(int i =0; i<l1;i++){
+            missingInfo = missingInfo + QString::fromStdString(missingFirstYear[i].getCourseID() + " ");
+        }
+    }
+    else{
+        missingInfo = missingInfo + "You got all your first year courses!\n";
+    }
+
+    if (l2 > 0){
+        missingInfo + "Second year courses:\n";
+        for(int i =0; i<l2;i++){
+            missingInfo = missingInfo + QString::fromStdString(missingSecYear[i].getCourseID() + " ");
+        }
+    }
+    else{
+        missingInfo = missingInfo + "You got all your second year courses!\n";
+    }
+
+    if (l3>0){
+        missingInfo + "Third year courses:\n";
+        for(int i =0; i<l3; i++){
+            missingInfo = missingInfo + QString::fromStdString(missingThirYear[i].getCourseID() + " ");
+        }
+    }
+    else{
+        missingInfo = missingInfo + "You got all your third year courses!\n";
+    }
+
+    if (l4>0){
+        missingInfo + "Second year courses:\n";
+        for(int i =0; i<l4;i++)
+        {
+            missingInfo = missingInfo + QString::fromStdString(missingFourthYear[i].getCourseID() + " ");
+        }
+    }
+    else{
+        missingInfo = missingInfo + "You got all your fourth year courses!\n";
+    }
+
+    missingInfo = missingInfo + "\n You are missing" + QString::number(user1.compCheck()) + "complementary studies";
+
+    missingCoursesBox.setText(missingInfo);
+    missingCoursesBox.exec();
+
+
 }
