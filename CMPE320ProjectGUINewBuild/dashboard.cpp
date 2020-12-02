@@ -3,7 +3,7 @@
 #include "QDebug"
 #include "QMessageBox"
 #include "Course.h"
-#include "readAPI.h"
+
 #include "Requirement.h"
 #include "User.h"
 #include <QFile>
@@ -15,7 +15,7 @@ dashboard::dashboard(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::dashboard)
 {
-    ui->setupUi(this);
+
     ui->setupUi(this);
     ui->comboBox->addItem("Computer-Engineering");
     ui->comboBox->addItem("Electrical-Engineering");
@@ -312,7 +312,7 @@ void dashboard::on_yesBtn_clicked()
     std::string progName = disipline.toLocal8Bit().constData();
     std::string courseName = course.toLocal8Bit().constData();
     std::string sem = semester.toLocal8Bit().constData();
-    User user1(progName);
+    User user(progName);
 
 
     if(year != 1 && year != 2  && year != 3  && year != 4  && year != 5)
@@ -334,7 +334,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser->setText(ui->textBrowser->toPlainText() + courseName);
         }
@@ -345,7 +345,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_6->setText(ui->textBrowser_6->toPlainText() + courseName);
         }
@@ -356,7 +356,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_7->setText(ui->textBrowser_7->toPlainText() + courseName);
         }
@@ -367,7 +367,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_8->setText(ui->textBrowser_8->toPlainText() + courseName);
         }
@@ -378,7 +378,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_9->setText(ui->textBrowser_9->toPlainText() + courseName);
         }
@@ -388,7 +388,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_10->setText(ui->textBrowser_10->toPlainText() + courseName);
         }
@@ -399,7 +399,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_3->setText(ui->textBrowser_3->toPlainText() + courseName);
         }
@@ -410,7 +410,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_11->setText(ui->textBrowser_11->toPlainText() + courseName);
         }
@@ -421,7 +421,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_12->setText(ui->textBrowser_12->toPlainText() + courseName);
         }
@@ -432,7 +432,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_4->setText(ui->textBrowser_4->toPlainText() + courseName);
         }
@@ -443,7 +443,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_5->setText(ui->textBrowser_5->toPlainText() + courseName);
         }
@@ -454,7 +454,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_13->setText(ui->textBrowser_13->toPlainText() + courseName);
         }
@@ -464,7 +464,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_14->setText(ui->textBrowser_14->toPlainText() + courseName);
         }
@@ -475,7 +475,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_15->setText(ui->textBrowser_15->toPlainText() + courseName);
         }
@@ -486,7 +486,7 @@ void dashboard::on_yesBtn_clicked()
         //verify course instead of "true"
         if (true && !errors)
         {
-            user1.addCourse(courseName, year, sem);
+            user.addCourse(courseName, year, sem);
             QString courseName = course + "\n ";
             ui->textBrowser_16->setText(ui->textBrowser_16->toPlainText() + courseName);
         }
@@ -515,11 +515,11 @@ void dashboard::on_missingBtn_clicked()
     QMessageBox missingCoursesBox;
     QString disipline = ui->comboBox->currentText();
     std::string progName = disipline.toLocal8Bit().constData();
-    User user1(progName);
-    vector<Course> missingFirstYear = user1.getMissingFirCourse();
-    vector<Course> missingSecYear = user1.getMissingSecCourse();
-    vector<Course> missingThirYear = user1.getMissingThirCourse();
-    vector<Course> missingFourthYear = user1.getMissingFourCourse();
+    User user2(progName);
+    vector<Course> missingFirstYear = user2.getMissingFirCourse();
+    vector<Course> missingSecYear = user2.getMissingSecCourse();
+    vector<Course> missingThirYear = user2.getMissingThirCourse();
+    vector<Course> missingFourthYear = user2.getMissingFourCourse();
 
     int l1 = missingFirstYear.size();
     int l2 = missingSecYear.size();
@@ -571,7 +571,7 @@ void dashboard::on_missingBtn_clicked()
         missingInfo = missingInfo + "You got all your fourth year courses!\n";
     }
 
-    missingInfo = missingInfo + "\n You are missing" + QString::number(user1.compCheck()) + "complementary studies";
+    missingInfo = missingInfo + "\n You are missing" + QString::number(user2.compCheck()) + "complementary studies";
 
     Requirement req(progName);
 
@@ -597,7 +597,7 @@ void dashboard::on_missingBtn_clicked()
 
 
 
-     missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupANeeded()) + "Group A courses. Here are your options:\n";
+     missingInfo = missingInfo + "You are missing " + QString::number(user2.getNumGroupANeeded()) + "Group A courses. Here are your options:\n";
 
         for (int i = 0; i < groupAL; i++){
 
@@ -607,7 +607,7 @@ void dashboard::on_missingBtn_clicked()
 
 
 
-        missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupBNeeded()) + "Group B courses. Here are your options:\n";
+        missingInfo = missingInfo + "You are missing " + QString::number(user2.getNumGroupBNeeded()) + "Group B courses. Here are your options:\n";
 
         for (int i = 0; i < groupBL; i++)
 
@@ -619,7 +619,7 @@ void dashboard::on_missingBtn_clicked()
 
 
 
-            missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupCNeeded()) + "Group C courses. Here are your options:\n";
+            missingInfo = missingInfo + "You are missing " + QString::number(user2.getNumGroupCNeeded()) + "Group C courses. Here are your options:\n";
 
 
 
@@ -633,7 +633,7 @@ void dashboard::on_missingBtn_clicked()
 
 
 
-            missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupDNeeded()) + "Group D courses. Here are your options:\n";
+            missingInfo = missingInfo + "You are missing " + QString::number(user2.getNumGroupDNeeded()) + "Group D courses. Here are your options:\n";
 
 
 

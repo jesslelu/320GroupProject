@@ -23,7 +23,6 @@ class User {
 public:
 	User(vector<string> courses, string progname);
 	User(string progname);
-    User();
 	vector<Course> getMissing(vector<Course> year);
 	vector<Course> getUserCourses();
 

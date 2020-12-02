@@ -14,16 +14,14 @@ SOURCES += \
     User.cpp \
     dashboard.cpp \
     main.cpp \
-    mainwindow.cpp \
-    readAPI.cpp
+    mainwindow.cpp
 
 HEADERS += \
     Course.h \
     Requirement.h \
     User.h \
     dashboard.h \
-    mainwindow.h \
-    readAPI.h
+    mainwindow.h
 
 FORMS += \
     dashboard.ui \

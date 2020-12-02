@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "User.h"
 #include "Course.h"
-#include "readAPI.h"
+
 #include "Requirement.h"
 
 
