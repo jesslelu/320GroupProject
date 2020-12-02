@@ -11,11 +11,11 @@
 #include <QMessageBox>
 #include <iostream>
 
-
-DashBoard::DashBoard(QWidget *parent) :
+dashboard::dashboard(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::DashBoard)
+    ui(new Ui::dashboard)
 {
+    ui->setupUi(this);
     ui->setupUi(this);
     ui->comboBox->addItem("Computer-Engineering");
     ui->comboBox->addItem("Electrical-Engineering");
@@ -36,7 +36,6 @@ DashBoard::DashBoard(QWidget *parent) :
     ui->lineEdit_2->setVisible(false);
     ui->lineEdit_3->setVisible(false);
     ui->lineEdit_4->setVisible(false);
-    ui->tableWidget->setVisible(false);
     ui->textBrowser->setVisible(false);
     ui->textBrowser_10->setVisible(false);
     ui->textBrowser_11->setVisible(false);
@@ -57,7 +56,7 @@ DashBoard::DashBoard(QWidget *parent) :
     ui->yesBtn->setVisible(false);
     ui->noBtn->setVisible(false);
     ui->addCourseLabel->setVisible(false);
-
+    ui->missingBtn->setVisible(false);
     ui->textBrowser->setReadOnly(true);
     ui->textBrowser_10->setReadOnly(true);
     ui->textBrowser_11->setReadOnly(true);
@@ -74,16 +73,14 @@ DashBoard::DashBoard(QWidget *parent) :
     ui->textBrowser_8->setReadOnly(true);
     ui->textBrowser_9->setReadOnly(true);
     ui->textEdit->setReadOnly(true);
-
-    //vector<string> courses;
-
 }
 
-DashBoard::~DashBoard()
+dashboard::~dashboard()
 {
     delete ui;
 }
-void DashBoard::on_pushButton_2_clicked()
+
+void dashboard::on_pushButton_2_clicked()
 {
     ui->yesBtn->setVisible(true);
     ui->noBtn->setVisible(true);
@@ -150,7 +147,7 @@ void DashBoard::on_pushButton_2_clicked()
 
 }
 
-void DashBoard::on_submitBtn_clicked()
+void dashboard::on_submitBtn_clicked()
 {
     ui->textEdit->setVisible(true);
     ui->label_2->setVisible(true);
@@ -160,7 +157,6 @@ void DashBoard::on_submitBtn_clicked()
     ui->lineEdit_2->setVisible(true);
     ui->lineEdit_3->setVisible(true);
     ui->lineEdit_4->setVisible(true);
-    ui->tableWidget->setVisible(true);
     ui->textBrowser->setVisible(true);
     ui->textBrowser_10->setVisible(true);
     ui->textBrowser_11->setVisible(true);
@@ -177,24 +173,25 @@ void DashBoard::on_submitBtn_clicked()
     ui->textBrowser_8->setVisible(true);
     ui->textBrowser_9->setVisible(true);
     ui->pushButton_2->setVisible(true);
+    ui->missingBtn->setVisible(true);
 
     QString disipline = ui->comboBox->currentText();
     int year = ui->yearIn->text().toInt();
     std::string progName = disipline.toLocal8Bit().constData();
 
     User user1(progName);
-    
+
 
     if(year == 1){
         vector<Course> missingfirstyear = user1.getMissingFirCourse();
-        int l = missingfirstyear.size(); 
+        int l = missingfirstyear.size();
         for (int i = 0; i < l/2; i++) {
             ui->textBrowser->setText(ui->textBrowser->toPlainText()+ QString::fromStdString(missingfirstyear[i].getCourseID()+ "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
         }
         for (int i = l/2; i < l; i++) {
             ui->textBrowser_6->setText(ui->textBrowser_6->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
         }
 
     } else if(year == 2){
@@ -202,23 +199,23 @@ void DashBoard::on_submitBtn_clicked()
         vector<Course> missingSecyear = user1.getMissingSecCourse();
         int l = missingfirstyear.size();
         int l2 = missingSecyear.size();
-        
+
 
         for (int i = 0; i < l/2; i++) {
             ui->textBrowser->setText(ui->textBrowser->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
         }
         for (int i = l/2; i < l; i++) {
                 ui->textBrowser_6->setText(ui->textBrowser_6->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-                user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
+                //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
         }
         for (int i = 0; i < l2/2; i++) {
             ui->textBrowser_8->setText(ui->textBrowser_8->toPlainText() + QString::fromStdString(missingSecyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingSecyear[i].getCourseID(), 2, "F");
+            //user1.addCourse(missingSecyear[i].getCourseID(), 2, "F");
         }
         for (int i = l2/2; i < l2; i++) {
             ui->textBrowser_9->setText(ui->textBrowser_9->toPlainText() + QString::fromStdString(missingSecyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 2, "W");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 2, "W");
         }
 
     } else if(year == 3){
@@ -233,27 +230,27 @@ void DashBoard::on_submitBtn_clicked()
 
         for (int i = 0; i < l / 2; i++) {
             ui->textBrowser->setText(ui->textBrowser->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
         }
         for (int i = l / 2; i < l; i++) {
             ui->textBrowser_6->setText(ui->textBrowser_6->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
         }
         for (int i = 0; i < l2 / 2; i++) {
             ui->textBrowser_8->setText(ui->textBrowser_8->toPlainText() + QString::fromStdString(missingSecyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingSecyear[i].getCourseID(), 2, "F");
+            //user1.addCourse(missingSecyear[i].getCourseID(), 2, "F");
         }
         for (int i = l2 / 2; i < l2; i++) {
             ui->textBrowser_9->setText(ui->textBrowser_9->toPlainText() + QString::fromStdString(missingSecyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingSecyear[i].getCourseID(), 2, "W");
+            //user1.addCourse(missingSecyear[i].getCourseID(), 2, "W");
         }
         for (int i = 0; i < l3/2; i++) {
             ui->textBrowser_3->setText(ui->textBrowser_3->toPlainText() + QString::fromStdString(missingThirdyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingThirdyear[i].getCourseID(), 3, "F");
+            //user1.addCourse(missingThirdyear[i].getCourseID(), 3, "F");
         }
         for (int i = l3/2; i < l3; i++) {
             ui->textBrowser_11->setText(ui->textBrowser_11->toPlainText() + QString::fromStdString(missingThirdyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingThirdyear[i].getCourseID(), 3, "W");
+            //user1.addCourse(missingThirdyear[i].getCourseID(), 3, "W");
         }
     }
     else if (year == 4) {
@@ -269,41 +266,41 @@ void DashBoard::on_submitBtn_clicked()
 
         for (int i = 0; i < l / 2; i++) {
             ui->textBrowser->setText(ui->textBrowser->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "F");
         }
         for (int i = l / 2; i < l; i++) {
             ui->textBrowser_6->setText(ui->textBrowser_6->toPlainText() + QString::fromStdString(missingfirstyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
+            //user1.addCourse(missingfirstyear[i].getCourseID(), 1, "W");
         }
         for (int i = 0; i < l2 / 2; i++) {
             ui->textBrowser_8->setText(ui->textBrowser_8->toPlainText() + QString::fromStdString(missingSecyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingSecyear[i].getCourseID(), 2, "F");
+            //user1.addCourse(missingSecyear[i].getCourseID(), 2, "F");
         }
         for (int i = l2 / 2; i < l2; i++) {
             ui->textBrowser_9->setText(ui->textBrowser_9->toPlainText() + QString::fromStdString(missingSecyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingSecyear[i].getCourseID(), 2, "W");
+            //user1.addCourse(missingSecyear[i].getCourseID(), 2, "W");
         }
         for (int i = 0; i < l3 / 2; i++) {
             ui->textBrowser_3->setText(ui->textBrowser_3->toPlainText() + QString::fromStdString(missingThirdyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingThirdyear[i].getCourseID(), 3, "F");
+            //user1.addCourse(missingThirdyear[i].getCourseID(), 3, "F");
         }
         for (int i = l3 / 2; i < l3; i++) {
             ui->textBrowser_11->setText(ui->textBrowser_11->toPlainText() + QString::fromStdString(missingThirdyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingThirdyear[i].getCourseID(), 3, "W");
+            //user1.addCourse(missingThirdyear[i].getCourseID(), 3, "W");
         }
         for (int i = 0; i < l4/2; i++) {
             ui->textBrowser_4->setText(ui->textBrowser_4->toPlainText() + QString::fromStdString(missingFourthyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingFourthyear[i].getCourseID(), 4, "F");
+            //user1.addCourse(missingFourthyear[i].getCourseID(), 4, "F");
         }
         for (int i = l4/2; i < l4; i++) {
             ui->textBrowser_5->setText(ui->textBrowser_5->toPlainText() + QString::fromStdString(missingFourthyear[i].getCourseID() + "\n"));
-            user1.addCourse(missingFourthyear[i].getCourseID(), 4, "W");
+            //user1.addCourse(missingFourthyear[i].getCourseID(), 4, "W");
         }
     }
     QMessageBox::information(this, "Your Dashboard", "Mandatory courses up to your year have been added. Now, please add any electives you have taken.");
 }
 
-void DashBoard::on_yesBtn_clicked()
+void dashboard::on_yesBtn_clicked()
 {
     QMessageBox errorBox;
     bool errors = false;
@@ -315,7 +312,7 @@ void DashBoard::on_yesBtn_clicked()
     std::string progName = disipline.toLocal8Bit().constData();
     std::string courseName = course.toLocal8Bit().constData();
     std::string sem = semester.toLocal8Bit().constData();
-    //user1 = User(progName);
+    User user1(progName);
 
 
     if(year != 1 && year != 2  && year != 3  && year != 4  && year != 5)
@@ -502,7 +499,7 @@ void DashBoard::on_yesBtn_clicked()
 
 }
 
-void DashBoard::on_noBtn_clicked()
+void dashboard::on_noBtn_clicked()
 {
     ui->yesBtn->setVisible(false);
     ui->noBtn->setVisible(false);
@@ -513,10 +510,12 @@ void DashBoard::on_noBtn_clicked()
 }
 
 
-void DashBoard::on_missingBtn_clicked()
+void dashboard::on_missingBtn_clicked()
 {
     QMessageBox missingCoursesBox;
-
+    QString disipline = ui->comboBox->currentText();
+    std::string progName = disipline.toLocal8Bit().constData();
+    User user1(progName);
     vector<Course> missingFirstYear = user1.getMissingFirCourse();
     vector<Course> missingSecYear = user1.getMissingSecCourse();
     vector<Course> missingThirYear = user1.getMissingThirCourse();
@@ -574,6 +573,77 @@ void DashBoard::on_missingBtn_clicked()
 
     missingInfo = missingInfo + "\n You are missing" + QString::number(user1.compCheck()) + "complementary studies";
 
+    Requirement req(progName);
+
+    vector<Course> groupA = req.getGroupA();
+
+    vector<Course> groupB = req.getGroupB();
+
+    vector<Course> groupC = req.getGroupC();
+
+    vector<Course> groupD = req.getGroupD();
+
+    int groupAL = groupA.size();
+
+    int groupBL = groupB.size();
+
+    int groupCL = groupC.size();
+
+    int groupDL = groupD.size();
+
+
+
+
+
+
+
+     missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupANeeded()) + "Group A courses. Here are your options:\n";
+
+        for (int i = 0; i < groupAL; i++){
+
+             missingInfo = missingInfo + QString::fromStdString(groupA[i].getName()+"\n");
+
+        }
+
+
+
+        missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupBNeeded()) + "Group B courses. Here are your options:\n";
+
+        for (int i = 0; i < groupBL; i++)
+
+        {
+
+            missingInfo = missingInfo + QString::fromStdString(groupB[i].getName() + "\n");
+
+        }
+
+
+
+            missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupCNeeded()) + "Group C courses. Here are your options:\n";
+
+
+
+            for (int i = 0; i < groupCL; i++)
+
+            {
+
+                missingInfo = missingInfo + QString::fromStdString(groupC[i].getName() + "\n");
+
+            }
+
+
+
+            missingInfo = missingInfo + "You are missing " + QString::number(user1.getNumGroupDNeeded()) + "Group D courses. Here are your options:\n";
+
+
+
+            for (int i = 0; i < groupDL; i++)
+
+            {
+
+                missingInfo = missingInfo + QString::fromStdString(groupD[i].getName() + "\n");
+
+            }
     missingCoursesBox.setText(missingInfo);
     missingCoursesBox.exec();
 

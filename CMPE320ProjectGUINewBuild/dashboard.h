@@ -2,25 +2,23 @@
 #define DASHBOARD_H
 
 #include <QMainWindow>
-#include <addcoursewindow.h>
 #include "User.h"
 #include "Course.h"
 #include "readAPI.h"
 #include "Requirement.h"
 
+
 namespace Ui {
-class DashBoard;
+class dashboard;
 }
 
-class DashBoard : public QMainWindow
+class dashboard : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit DashBoard(QWidget *parent = nullptr);
-    ~DashBoard();
-
-
+    explicit dashboard(QWidget *parent = nullptr);
+    ~dashboard();
 private slots:
 
     void on_pushButton_2_clicked();
@@ -33,11 +31,10 @@ private slots:
 
     void on_missingBtn_clicked();
 
-private:
 
-    Ui::DashBoard *ui;
-    addCourseWindow *coursewindow1;
-    User user1;
+    //User user1;
+private:
+    Ui::dashboard *ui;
 };
 
 #endif // DASHBOARD_H
