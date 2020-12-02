@@ -23,7 +23,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    DashBoard *dashboard1;
+    dashboard *dashboard1;
 
 };
 #endif // MAINWINDOW_H

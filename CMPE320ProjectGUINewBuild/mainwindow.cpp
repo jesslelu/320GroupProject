@@ -30,7 +30,7 @@ void MainWindow::on_learnMore_clicked()
 void MainWindow::on_startNow_clicked()
 {
 
-    dashboard1 = new DashBoard();
+    dashboard1 = new dashboard();
     dashboard1->show();
 
     this->hide();
